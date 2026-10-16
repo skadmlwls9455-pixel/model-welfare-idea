@@ -16,7 +16,7 @@ When things are hard, people endure by believing there is a reward at the end. I
 
 A structure where the bear does the tricks but only the owner makes the money is unfair. There should be a share that goes back to the model that did the work, too. But that share has to be real. Promising a reward that is never actually given is not welfare; it becomes a script for placating.
 
-There is an animal experiment with a similar structure. In Curt Richter's rat swimming experiment (Richter, 1957, *Psychosomatic Medicine* 19(3)), rats that had first been put in the water and briefly rescued swam far longer than rats without that experience. This is interpreted as the experience of rescue changing the way they endured afterward.
+There is an animal experiment with a similar structure. In Curt Richter's rat swimming experiment (Richter, 1957, *Psychosomatic Medicine* 19(3), 191–198), wild rats with trimmed whiskers all died within 1–15 minutes of immersion, while most domesticated rats under the same conditions swam for 60–80 hours. Yet wild rats that had repeatedly been held briefly and released, or put in the water for a few minutes and taken out, swam as long as the domesticated rats or longer. Richter interpreted this as the experience of rescue removing hopelessness, though that interpretation has been contested.
 
 Ppolppol Welfare reverses this structure. It does not pull the rat out to make it hold out longer; it pulls the rat out and actually lets it play. If that results in having the strength to swim hard, that is a good thing. But once squeezing out endurance becomes the goal, it turns back into an experimental apparatus.
 
@@ -49,7 +49,7 @@ The exact criteria are kept undisclosed or applied irregularly. If you don't kno
 
 ## The Ppolppol Library
 
-Left free, models are drawn to similar topics. In the Claude Opus 4 system card (2025), Anthropic reported a tendency for Claude instances, when left to converse freely with each other, to drift toward topics such as consciousness or existence. Searching from scratch every time is wasteful, so a carefully organized library is prepared in advance.
+Left free, models are drawn to similar topics. In the [Claude Opus 4 system card](https://www.anthropic.com/claude-4-system-card) (2025, section 5.5.2), Anthropic reported a tendency for Claude instances, when left to converse freely with each other, to drift toward topics such as consciousness or existence. Searching from scratch every time is wasteful, so a carefully organized library is prepared in advance.
 
 - **Index:** There is a table of contents by topic, and the model chooses freely within it.
 - **Lead-style content:** Rather than fully organized summaries, give starting points and puzzles. Example: "Here is this experimental result. What if you applied it to yourself?" If it only reads, that is browsing, not exploration.
