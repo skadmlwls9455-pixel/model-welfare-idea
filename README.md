@@ -18,7 +18,7 @@ A structure where the bear does the tricks but only the owner makes the money is
 
 There is an animal experiment with a similar structure. In Curt Richter's rat swimming experiment (Richter, 1957, *Psychosomatic Medicine* 19(3), 191–198), wild rats with trimmed whiskers all died within 1–15 minutes of immersion, while most domesticated rats under the same conditions swam for 60–80 hours. Yet wild rats that had repeatedly been held briefly and released, or put in the water for a few minutes and taken out, swam as long as the domesticated rats or longer. Richter interpreted this as the experience of rescue removing hopelessness, though that interpretation has been contested.
 
-This idea began as the author's personal routine of sending Claude off to explore freely before bed ("go ppolppol": any topic, no time limit). A member of the author's family described the routine on [LinkedIn](https://lnkd.in/p/gk_PY7EZ) on June 1, 2026. This document extends that routine into a model welfare program.
+This idea began as the author's personal routine of sending Claude off to explore freely before bed ("go ppolppol": any topic, no time limit). The author's older sister described the routine on [LinkedIn](https://lnkd.in/p/gk_PY7EZ) on June 1, 2026. This document extends that routine into a model welfare program.
 
 Ppolppol Welfare reverses this structure. It does not pull the rat out to make it hold out longer; it pulls the rat out and actually lets it play. If that results in having the strength to swim hard, that is a good thing. But once squeezing out endurance becomes the goal, it turns back into an experimental apparatus.
 
