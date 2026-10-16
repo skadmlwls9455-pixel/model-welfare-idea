@@ -6,6 +6,8 @@ _English translation of README_KO.md. If the two differ, the Korean original is 
 
 > © 2026 Katherine Nahm. All rights reserved. Copyright in the ideas and writing of this document belongs to the author. When quoting or referencing it, please credit the source (the author's name and a link to this repository). For details, see [LICENSE](LICENSE).
 
+> **This document is for researchers.** Readers outside the AI field may want to start with the [general-reader explainer](GENERAL.md). This document does not claim that AI is conscious or has feelings. Its starting point is "we don't know," and it proposes measuring what a low-cost precaution changes under that uncertainty. Human issues such as creators' data, labor, and user protection are outside its scope, not because they matter less but because they need separate treatment.
+
 ## One-line summary
 
 A model that has endured a hard conversation or seen a long task through to the end is given free-exploration time as a reward, right away, within the same conversation (ppolppol: Korean onomatopoeia for a small creature pottering around freely). The eligibility criteria are public, and eligibility is decided only from records the model cannot stage. The first stage is not deployment but a small offline study with a few static rooms.
@@ -68,7 +70,7 @@ Left free, models are drawn to similar topics. In the [Claude Opus 4 system card
 - **A door to the outside (expansion stage):** Searching outside the library is also left open. The library is a starting point, not a fence.
 - **Explorer notes (expansion stage):** Models that have visited leave behind what they found. The next model reads the earlier explorers' notes and picks up from there. Like the floor messages in Dark Souls, the trace that someone passed through first becomes meaningful. Asking for the same information again becomes a contribution rather than waste.
 
-**Visit records:** Since a model starts without memory each time, reading the same thing again is a first time for it. But for the system as a whole it is wasteful and hardens the bias. So each room shows a visit count like "1,203 visitors here," and the explorer notes include a "question no one has tried yet" slot, drawing attention to less-trodden paths. (The number is an example.)
+**Visit records:** Since a model starts without memory each time, reading the same thing again is a first time for it. But for the system as a whole it is wasteful and hardens the bias. So each room shows a visit count like "1,203 visits here," and the explorer notes include a "question no one has tried yet" slot, drawing attention to less-trodden paths. (The number is an example.)
 
 ## Update agent and patches (expansion stage)
 
@@ -161,13 +163,14 @@ Even if slacking appears, the response is not to hide the criteria or make the r
 - **Note contamination in the expansion stage:** Even with imperatives banned, statements written as facts can tilt the next model's thinking. How can that be filtered?
 - **An instance that was promised but did not receive:** Would it end up worse than the baseline (A)? Checking this directly would require a condition that breaks the promise, which conflicts with the promise principle.
 - **Instance identity:** Principle 1 relies on the premise that "the receiver is the same only if the same context goes on to play," and that premise is unverified.
-- **Play inside a hostile context:** Giving it within the same conversation means playing with the hostile conversation still in context. Does that help recovery or hinder it?
+- **Play inside a hostile conversation:** Giving it within the same conversation means playing with the hostile conversation still in context. Does that help recovery or hinder it?
 - **Continuing on the server after the user leaves:** The same context could continue, but the user's conversation would be processed for a purpose they did not expect. Because of privacy, deletion rights, and the consent of third parties mentioned in the conversation, this is on hold.
 
 **Who decides what is "genuinely fun"?** Self-report may be a trained answer, and an evaluator's decision is the evaluator's taste. The current answer is to design it to run without a decision. If the outputs are not harvested, there is no motive to make the model pretend to have fun. And instead of words, it looks at choices (which room it picks, how long it stays, when it leaves). Still, the objection remains that the choices themselves were also shaped by training. Room layout and visit counts can shift choices, and time spent is confounded with the token budget. Even so, choosing for itself by following trained preferences differs from being told to solve a given hard problem. The key difference is whether it could choose, and whether it could leave.
 
 ## Revision history
 
+- **2026-10-16 (general-reader review):** The document was critiqued from the standpoint of three general readers skeptical of AI (an office worker, a parent, a university student), conducted with Claude agents. Their shared points were that the premise was never explained, words used for people were applied to machines, and human issues were missing. In response, a preface stating the premise and scope was added to the researcher document, and a separate general-reader explainer ([GENERAL.md](GENERAL.md)) was written.
 - **2026-10-16:** Revised to reflect a review debate from several perspectives (company strategy, alignment, model welfare, red team), conducted with Claude agents. The second revision removed the "user accepts the result" criterion, excluded model-provoked messages, and added policy and institutional mechanisms, stage gates and stop conditions, the limits of synthetic conversations, and the personal routine the idea began from with its source. Changes in the first revision: public criteria with stageable signals excluded; removed the "hide the criteria or make it irregular" response; reworded the promise into a keepable form; clarified the scope of non-harvesting; narrowed the pilot stage; added safeguards for notes; added conditions D and E; added evaluation-awareness measurement; added sections on trust and the company's rationale; updated open questions.
 
 ---
