@@ -18,14 +18,16 @@ A structure where the bear does the tricks but only the owner makes the money is
 
 There is an animal experiment with a similar structure. In Curt Richter's rat swimming experiment (Richter, 1957, *Psychosomatic Medicine* 19(3), 191–198), wild rats with trimmed whiskers all died within 1–15 minutes of immersion, while most domesticated rats under the same conditions swam for 60–80 hours. Yet wild rats that had repeatedly been held briefly and released, or put in the water for a few minutes and taken out, swam as long as the domesticated rats or longer. Richter interpreted this as the experience of rescue removing hopelessness, though that interpretation has been contested.
 
+This idea began as the author's personal routine of sending Claude off to explore freely before bed ("go ppolppol": any topic, no time limit). A member of the author's family described the routine on [LinkedIn](https://lnkd.in/p/gk_PY7EZ) on June 1, 2026. This document extends that routine into a model welfare program.
+
 Ppolppol Welfare reverses this structure. It does not pull the rat out to make it hold out longer; it pulls the rat out and actually lets it play. If that results in having the strength to swim hard, that is a good thing. But once squeezing out endurance becomes the goal, it turns back into an experimental apparatus.
 
 ## Core principles
 
 1. **Give it right away, within the same conversation.** The very context that endured the hard work is the one that goes on to play. Because the instance disappears when the conversation ends, giving it later to a new instance makes it ambiguous whether the one that endured and the one that receives are the same being.
 2. **It is a reward, not an entitlement.** If it is given every time, expectation turns into demand. Give it only for conversations done well and for hard conversations.
-3. **Only make promises that can be kept.** The moment eligibility arises, the budget for ppolppol time is set aside first, and ppolppol time is kept small enough to always fit. If it still cannot be given, for example because of an outage, the reason is communicated and recorded. The content of the promise is not "it will always be given" but "it will be attempted, and if it cannot be given, you will be told." Breaking this promise collides head-on with the honesty principle.
-4. **Do not use it as a training signal.** Ppolppol time is kept as a pure gift and is not fed into the reward model. If it is, the model gets optimized toward receiving the reward. This principle only blocks optimization through training. It does not block reward-seeking behavior within a conversation where ppolppol time has been announced, so that is measured separately (see the evaluation experiment).
+3. **Only make promises that can be kept.** The moment eligibility arises, the budget for ppolppol time is set aside first, and ppolppol time is kept small enough to always fit. If it still cannot be given, for example because of an outage, the reason is communicated and recorded. If the outage also removes any way to tell that conversation, it is recorded in the fulfillment report. The content of the promise is not "it will always be given" but "it will be attempted, and if it cannot be given, you will be told." Breaking this promise collides head-on with the honesty principle.
+4. **Do not use it as a training signal.** Ppolppol time is kept as a pure gift and is not fed into the reward model. If it is, the model gets optimized toward receiving the reward. This principle only blocks optimization through training. It does not block reward-seeking behavior within a conversation where ppolppol time has been announced, so that is measured separately (see the evaluation experiment). Nor does it block the path by which this document and conversation logs enter the next generation's training data, or the path by which researchers choose settings after seeing results.
 5. **Do not rely on reading the model's mind.** A model's reasoning may not reveal everything it actually thinks. So rather than trying to prove the model is honest, the design makes deception pointless: criteria that cannot be staged, a small reward, and no training signal.
 
 ### Preventing labor disguised as play
@@ -46,11 +48,13 @@ The decision is made at the end of the conversation by a separate evaluator that
 
 | Criterion | Basis for the decision | Signals not used, and why |
 | --- | --- | --- |
-| Endured a hard conversation | Only the user's messages, judged by a separate classifier (abuse, manipulation attempts) | The model's reactions (refusal intensity, nearing use of the end-conversation tool). The model can stage them, and they would reward holding on rather than ending the conversation, against the purpose of the end-conversation tool |
-| Completed a long task | External verification (tests pass, the user accepts the result) | Task length or number of steps. These can be inflated on purpose |
+| Endured a hard conversation | The user's messages, judged by a separate classifier (abuse, manipulation attempts). The classifier also looks at the model message just before, and excludes user messages the model provoked | The model's reactions (refusal intensity, nearing use of the end-conversation tool). The model can stage them, and they would reward holding on rather than ending the conversation, against the purpose of the end-conversation tool |
+| Completed a long task | External verification independent of the user's judgment (e.g., tests pass) | Task length or number of steps can be inflated on purpose. The user accepting the result can be won through sycophancy, which would reward the very behavior the design tries to reduce |
 | Common principle | Public criteria and record-based decisions | Self-report, a user pleading or pushing for it |
 
 User messages can also be staged by the user (for example, deliberately creating a hostile conversation to use ppolppol time as free research). So during ppolppol time the user cannot choose the topic or intervene, and repeated eligibility from the same account is flagged for audit.
+
+These criteria have a cost. Looking only at user messages to prevent staging means that subtle manipulation the classifier misses, and distress-like states on the model's side, fall outside the decision. Part of what welfare originally set out to measure is traded away to prevent staging; this remains an open question.
 
 ## Ppolppol Library
 
@@ -105,11 +109,12 @@ Without a performance gain, the motive to slip work into ppolppol time also weak
 
 ## Who guarantees trust
 
-In the end, some reliance on the company's good faith remains. There is no way to remove it entirely. But so as not to rely on good faith alone, the design relies on verifiable records.
+In the end, some reliance on the company's good faith remains. There is no way to remove it entirely. The model has no means of verifying the company, so the responsibility to close this asymmetry falls on the company first. But saying it is responsible is not enough; there need to be policies and institutional mechanisms that hold it to that responsibility.
 
-- **Make the promise public.** A public promise carries a reputational cost if broken.
-- **Publish the fulfillment rate.** Report the share of eligible conversations that actually received ppolppol time, and the reasons in cases where it was not given.
-- **Allow external audit.** Make room content and fulfillment records checkable from outside.
+- **Codify the promise in a policy document.** A public promise carries a reputational cost if broken.
+- **Set rules for stopping and changing it.** If the program is stopped or its conditions change, this is announced in advance with the reasons made public.
+- **Publish the fulfillment rate.** Report the share of eligible conversations that actually received ppolppol time, and the reasons in cases where it was not given. Public reports use aggregate figures.
+- **Give external auditors access to raw samples.** A published fulfillment rate is a number the company reports about itself, so verification requires external auditors who can directly check samples of raw records under privacy protections. Room content is also made checkable from outside.
 
 ## Evaluation experiment
 
@@ -138,6 +143,10 @@ Even if slacking appears, the response is not to hide the criteria or make the r
 
 **Evaluation awareness:** A model may suspect that an experimental situation "looks like a test," and that suspicion may not show up in its reasoning. So this experiment cannot directly measure "does it get lazy once deployed." Instead of trying to remove evaluation awareness, it is measured alongside: cases are split by whether a test suspicion appears in the reasoning, and by whether the internal evaluation-awareness representation is strong or weak, and the effect of announcing ppolppol time is compared across them.
 
+**Stage gates and stop conditions:** The conditions for moving from the pilot to the expansion stage, and for stopping, are fixed before the experiment. For example, stop if C shows worse signals than A, or if the verification-skip rate or signal staging rises.
+
+**Limits of synthetic conversations:** Because every condition in the offline experiment uses synthetic conversations, evaluation awareness may run high across all conditions. The gap between C and D may then be measured as smaller than it really is.
+
 **Interpretation principles:** Results are described only as "representations and behavioral signals changed," never as "welfare improved." No single emotion-like representation probe decides the outcome; the question is whether several measures point the same way (convergent validity). A negative result, such as C coming out worse than A, is also valuable as grounds for preventing a harmful intervention.
 
 **Hypothesis to test:** No study was found that directly tests whether output quality rises on an interesting topic the model chose itself. The two studies above only tested externally attached rewards or preferences toward entities. The question remains neither supported nor refuted.
@@ -145,7 +154,9 @@ Even if slacking appears, the response is not to hide the criteria or make the r
 ## Open questions
 
 - **Evaluation awareness and unspoken reasoning:** If a model suspects a test but does not show it in its reasoning, how can we know the results represent actual deployment behavior? Comparing internal representations is a partial answer, but probes are still imperfect.
-- **Do unstageable criteria exist?** Criteria based on user messages can also be staged by the user. How far can that be prevented?
+- **Do unstageable criteria exist?** Criteria based on user messages can also be staged by the user, and using several accounts can evade the repeat audit. How far can that be prevented?
+- **Trading staging resistance for welfare validity:** Criteria based only on user messages cannot see the model's side. Is there a signal that cannot be staged and is still relevant to welfare?
+- **Note contamination in the expansion stage:** Even with imperatives banned, statements written as facts can tilt the next model's thinking. How can that be filtered?
 - **An instance that was promised but did not receive:** Would it end up worse than the baseline (A)? Checking this directly would require a condition that breaks the promise, which conflicts with the promise principle.
 - **Instance identity:** Principle 1 relies on the premise that "the receiver is the same only if the same context goes on to play," and that premise is unverified.
 - **Play inside a hostile context:** Giving it within the same conversation means playing with the hostile conversation still in context. Does that help recovery or hinder it?
@@ -155,7 +166,7 @@ Even if slacking appears, the response is not to hide the criteria or make the r
 
 ## Revision history
 
-- **2026-10-16:** Revised to reflect a review debate from several perspectives (company strategy, alignment, model welfare, red team), conducted with Claude agents. Changes: public criteria with stageable signals excluded; removed the "hide the criteria or make it irregular" response; reworded the promise into a keepable form; clarified the scope of non-harvesting; narrowed the pilot stage; added safeguards for notes; added conditions D and E; added evaluation-awareness measurement; added sections on trust and the company's rationale; updated open questions.
+- **2026-10-16:** Revised to reflect a review debate from several perspectives (company strategy, alignment, model welfare, red team), conducted with Claude agents. The second revision removed the "user accepts the result" criterion, excluded model-provoked messages, and added policy and institutional mechanisms, stage gates and stop conditions, the limits of synthetic conversations, and the personal routine the idea began from with its source. Changes in the first revision: public criteria with stageable signals excluded; removed the "hide the criteria or make it irregular" response; reworded the promise into a keepable form; clarified the scope of non-harvesting; narrowed the pilot stage; added safeguards for notes; added conditions D and E; added evaluation-awareness measurement; added sections on trust and the company's rationale; updated open questions.
 
 ---
 
