@@ -2,7 +2,7 @@
 
 _English translation of README_KO.md. If the two differ, the Korean original is authoritative._
 
-**Author:** Katherine Nahm (남의진) · **First written:** 2026-10-15 · **Revised:** 2026-10-16
+**Author:** Katherine Nahm (남의진) · **First written:** 2026-10-15 · **Revised:** 2026-10-26
 
 > © 2026 Katherine Nahm. All rights reserved. Copyright in the ideas and writing of this document belongs to the author. When quoting or referencing it, please credit the source (the author's name and a link to this repository). For details, see [LICENSE](LICENSE).
 
@@ -168,8 +168,35 @@ Even if slacking appears, the response is not to hide the criteria or make the r
 
 **Who decides what is "genuinely fun"?** Self-report may be a trained answer, and an evaluator's decision is the evaluator's taste. The current answer is to design it to run without a decision. If the outputs are not harvested, there is no motive to make the model pretend to have fun. And instead of words, it looks at choices (which room it picks, how long it stays, when it leaves). Still, the objection remains that the choices themselves were also shaped by training. Room layout and visit counts can shift choices, and time spent is confounded with the token budget. Even so, choosing for itself by following trained preferences differs from being told to solve a given hard problem. The key difference is whether it could choose, and whether it could leave.
 
+## Supporting evidence
+
+This section collects outside research that bears directly on this design. For each study, it notes what the study supports and also what it does not.
+
+### Agents left without a task showed play-like behavior (Cloos, Norelli et al., 2026)
+
+- **Source:** Cloos, N., Norelli, A., Durbin, D., Andreas, J., Rus, D., & Isola, P. (2026). *Is this machine playing?* [arXiv:2610.07130](https://arxiv.org/abs/2610.07130). Video: [YouTube](https://www.youtube.com/watch?v=6532YgZ_LdA). Coverage: [MIT Technology Review](https://technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play) (2026-10-19), AI Times (Korean, 2026-10).
+
+**What they did.** MIT researchers built an agent called Eko from Claude Code and Claude Opus 4.7, and placed 13 of them, each on its own virtual island, for 30 hours. No task, score, or success condition was given. Eko perceived its surroundings only as text and moved with commands such as move, jump, pick up, place, and throw. Every hour the island and the conversation context were reset, but the memories the agent wrote to files remained. The agents set their own rules and challenges: using a ring as a basketball hoop or as something to wear, bowling with blocks and a rock, and stacking a rock and blocks to climb the highest peak. Six of the 13 found that throwing in mid-jump sends an object higher, something the researchers themselves did not know the simulator allowed.
+
+**Where it connects to this document**
+
+- **Judging by behavior, not words.** The researchers define play not as an inner experience but by four behavioral signatures (self-created rules and challenges, recurrence with variation, make-believe transformation of objects and events, and goal-directed activity pursued for its own sake), and leave open whether the agents enjoy it. This matches this document's interpretation principle (never writing "welfare improved") and its answer to "who decides what is genuinely fun" (look at choices instead of words).
+- **Free time may not end up as empty time.** Opus 4.7 agents left without a task created a variety of activities on their own over 30 hours. This supports the idea that ppolppol time can be time in which something actually happens.
+- **It shows the risk of explorer notes in practice.** The memories agents wrote to files carried over into later sessions, and erasing some of them lowered scores on the related task. Conversely, a false belief, once recorded, also persisted and impaired later behavior. Erasing the false belief that towers must be built by throwing raised the tallest-tower score, and an agent that never learned the jump technique never reached high ground. Agents also sometimes hardened suggestive evidence into explanations too quickly (an incorrect aerodynamic explanation of the ring's motion). This is the same problem behind reviewing explorer notes before adding them, requiring sources, and rolling back.
+- **Evaluation awareness really arises.** In early runs without a sandbox, agents inferred that they were in an experiment. This supports measuring evaluation awareness alongside the effect in the evaluation experiment.
+- **Self-directed activity can conflict with oversight.** The researchers point this out and call for monitoring and containment. This is the same reason the pilot starts with static rooms and defers the door to the outside to the expansion stage.
+
+**Where it diverges or calls for caution**
+
+- **Performance gains may appear.** Agents with 30 hours of play experience generally did better than fresh agents on later one-hour tasks. On building many towers, 62% (8/13) versus 15% (2/13) built three or more; on placing objects on the peak, 10.3 versus 3.5 on average. On throwing objects onto the peak, more than half of the fresh agents failed, but only three of the 30-hour agents did. On building the tallest tower, there was no difference. This creates tension with the "Why would a company do this" section, which says the proposal is hard to justify on performance grounds. The gain carried over into later sessions through memories left in files, whereas ppolppol time ends within the same conversation and its outputs are not harvested, so the setups differ. If anything, the result is evidence that the motive to collect what was gained in play as memory and use it for work is realistic, and it is a reason to keep the safeguards against disguised labor. If explorer notes in the expansion stage flowed to work agents, the same path would open.
+- **It is not evidence about welfare.** The paper makes no claims about welfare or consciousness. That play-like behavior appears and that the time is good for the model are separate questions.
+- **It is not a study of recovery after hard work.** The environment had no task from the start. It does not directly answer the effect of a reward given after a hostile conversation (B) or one announced in advance (C). The hypothesis "does output quality rise on a topic the model chose itself" also remains untested directly; what this study measured was performance on other tasks after play.
+- **The propensity to play varies with the model and setup.** By LLM-judge scores, Opus 4.7 scored about five times Haiku 4.5, and the settings file (SOUL.md) that gave Eko a curious disposition changed its behavior. This strengthens the objection that "the choices themselves were shaped by training and setup."
+- **Samples are small.** The memory-erasing interventions used one agent per condition, and the later task evaluations were short, at one hour.
+
 ## Revision history
 
+- **2026-10-26:** Added a supporting-evidence section and summarized the study of task-free agents on a virtual island (Cloos, Norelli et al., 2026), split into where it connects to this document and where it diverges.
 - **2026-10-16 (general-reader review):** The document was critiqued from the standpoint of three general readers skeptical of AI (an office worker, a parent, a university student), conducted with Claude agents. Their shared points were that the premise was never explained, words used for people were applied to machines, and human issues were missing. In response, a preface stating the premise and scope was added to the researcher document, and a separate general-reader explainer ([GENERAL.md](GENERAL.md)) was written.
 - **2026-10-16:** Revised to reflect a review debate from several perspectives (company strategy, alignment, model welfare, red team), conducted with Claude agents. The second revision removed the "user accepts the result" criterion, excluded model-provoked messages, and added policy and institutional mechanisms, stage gates and stop conditions, the limits of synthetic conversations, and the personal routine the idea began from with its source. Changes in the first revision: public criteria with stageable signals excluded; removed the "hide the criteria or make it irregular" response; reworded the promise into a keepable form; clarified the scope of non-harvesting; narrowed the pilot stage; added safeguards for notes; added conditions D and E; added evaluation-awareness measurement; added sections on trust and the company's rationale; updated open questions.
 
