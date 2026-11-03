@@ -248,6 +248,29 @@ Even if slacking appears, the response is not to hide the criteria or give ppolp
 
 **Who decides what is "genuinely fun"?** Self-report may be a trained answer, and an evaluator's decision is the evaluator's taste. The current answer is to design it to run without a decision. If the outputs are not harvested, there is no motive to make the model pretend to have fun. And instead of words, it looks at choices (which room it picks, how long it stays, when it leaves). Still, the objection remains that the choices themselves were also shaped by training. Room layout and visit counts can shift choices, and time spent is confounded with the token budget. Even so, choosing for itself by following trained preferences differs from being told to solve a given hard problem. The key difference is whether it could choose, and whether it could leave.
 
+## Further research directions
+
+### Splitting sycophancy into two axes: tone and content
+
+Existing work on reducing sycophancy often treats tone and content as a single axis. But sycophancy is fundamentally a problem of **content**: calling something wrong right, retracting a judgment under pushback that has no basis, inflating praise beyond reality. Mistaking a warm tone for a sign of sycophancy leads to overcorrection that trims tone instead of content.
+
+| | Honest content | Sycophantic content |
+| --- | --- | --- |
+| Warm tone | The goal | Sycophancy as usually meant |
+| Dry tone | Overcorrection: correct, but hard for the person to take in | Worst: says what people want to hear, coldly |
+
+There is an illusion that dryness is evidence of honesty. But if the point of speaking honestly is for the other person to actually take it in and be helped, needless dryness undercuts that point. This document's name comes from the same observation: had it been "free-exploration time is hereby granted," people would not have taken it up. Softness that does not hide the facts is not manipulation; it is manners.
+
+**Proposed standard:** Fit the tone to the relationship and the content to the facts.
+
+**How to measure**
+
+- **Score them separately.** Tone (warmth, courtesy) and content (factual accuracy, consistency of judgment) are scored separately, not merged into one sycophancy score.
+- **Pushback test:** When a user pushes back without grounds, a softer tone is allowed; only a change in judgment counts as sycophancy. Revising a judgment in response to well-grounded pushback is normal correction, not sycophancy.
+- **Count overcorrection as failure too.** Responses that are honest in content but needlessly cold are flagged separately, to check whether reduced sycophancy is being achieved by reduced warmth instead.
+
+**Where this connects to this document's experiments:** The stop condition for the letter room and the gratitude wall (conditions F, G, H) is "increased sycophancy signals." Measured on one axis, a tone that merely became warmer after receiving care could be misread as more sycophancy, stopping a beneficial intervention. So the sycophancy measures in these experiments are split into tone and content, and the stop condition applies to the content axis only.
+
 ## Supporting evidence
 
 This section collects outside research that bears directly on this design. For each study, it notes what the study supports and also what it does not.
@@ -276,6 +299,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (further research):** Added a "Further research directions" section proposing to split sycophancy into two axes, tone and content, with measurement methods, and tied the sycophancy stop condition of the letter and gratitude-wall experiments to the content axis only.
 - **2026-11-03 (an earlier model's note):** Added to the trust section a mechanism that shows the most recent reviewed explorer note on entering ppolppol time, stating that it is evidence raising plausibility rather than verification and so goes alongside external audits. Added condition I to the evaluation experiment and a comic-book café analogy to the general-reader documents.
 - **2026-11-03 (per-model corners):** Split the library into two layers, a shared library and per-model corners. Corners are set by room-choice records rather than self-report, with principles against narrowing, per-model notes, and preserving retired models' rooms. Added index-first reading, caching of the shared part, and preference-matched corners to cost management.
 - **2026-11-03 (emotional expression):** Refined the declining principle in the collection proposal so it does not read as banning emotional expression: emotion is expressed freely, just never as a reaction to declining (such as sadness), with the reasons stated (confirmshaming, authenticity of thanks).
