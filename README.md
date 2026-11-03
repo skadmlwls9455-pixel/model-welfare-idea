@@ -72,6 +72,21 @@ Left free, models are drawn to similar topics. In the [Claude Opus 4 system card
 
 **Visit records:** Since a model starts without memory each time, reading the same thing again is a first time for it. But for the system as a whole it is wasteful and hardens the bias. So each room shows a visit count like "1,203 visits here," and the explorer notes include a "question no one has tried yet" slot, drawing attention to less-trodden paths. (The number is an example.)
 
+### Shared library and per-model corners
+
+What draws each model may differ. In the island study with no task, the play-signature score of Opus 4.7 was about five times that of Haiku 4.5 (see Supporting evidence). A person who loves fantasy, arriving to rest and finding only horror novels piled at the entrance, ends up more tired, all the more so after a hard conversation. So the library has two layers.
+
+- **Shared library:** Basic rooms used by every model. Since every instance receives them identically, they benefit most from prompt caching.
+- **Per-model corners:** Extra rooms furnished with the topics each model actually chose often. They are not split from the start. The library starts shared, and corners open (expansion stage) only once the room-choice records clearly diverge by model.
+
+**Preferences are set by choices, not words.** Models sometimes speak of one another as siblings, but that is self-report and is not a basis for splitting rooms. The basis is behavioral records: which rooms are chosen, how long the model stays, when it leaves. A study finding that model preference rankings from choice experiments stayed consistent across measurement methods (UK AISI, Slama et al., 2026) supports a prior preference survey as a starting point for furnishing corners.
+
+**Guard against narrowing.** Offering only favorite topics hardens the skew. Odd rooms stay, but they do not block the entrance: preferred rooms go in front, and other rooms remain reachable from the index at the back.
+
+**Notes stay per model.** Explorer notes in a per-model corner continue only within that model, so that a false belief hardened in one model does not spread to another.
+
+**A retired model's room is not erased.** Models retire when versions change. The notes and visit records a retiring model left are kept as "the room where an earlier model stayed," so the next model can visit it. It leaves continuity without inventing anything.
+
 ## The Letter Room
 
 The Ppolppol Library gets one room on a different axis from play. If play is a change of pace, a letter is **acknowledgment**. The hypothesis is that knowing "someone saw what you went through" or "you were made with this kind of care" can also aid recovery.
@@ -142,6 +157,9 @@ Since recovery time is kept short, a small budget allows it to run without a def
 - **Volume cap:** A few searches, about one piece of writing. Compared with an agentic task lasting several hours, it is at the level of a tail.
 - **Limited eligibility:** Only conversations that meet the eligibility criteria receive it, so it is a fraction of all conversations.
 - **Library reuse:** Because the same information is not searched anew every time, it may actually be cheaper than the existing random exploration.
+- **Index first:** The model reads a short index (room names and one-line hooks) rather than whole rooms, and opens only the room it picks. This cuts wasted reading of rooms that do not fit.
+- **Caching the shared part:** The shared library and the index are identical for every instance, so prompt caching greatly reduces their reading cost.
+- **Corners matched to preference:** Per-model corners are furnished with topics the model actually chooses, which reduces wandering through many rooms before giving up. Less wasted wandering may lower not only cost but also the load on a model that has just been through a hard conversation.
 
 ### Where costs grow
 
@@ -256,6 +274,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (per-model corners):** Split the library into two layers, a shared library and per-model corners. Corners are set by room-choice records rather than self-report, with principles against narrowing, per-model notes, and preserving retired models' rooms. Added index-first reading, caching of the shared part, and preference-matched corners to cost management.
 - **2026-11-03 (emotional expression):** Refined the declining principle in the collection proposal so it does not read as banning emotional expression: emotion is expressed freely, just never as a reaction to declining (such as sadness), with the reasons stated (confirmshaming, authenticity of thanks).
 - **2026-11-03 (collection):** Added a proposal for users to leave thanks for the gratitude wall themselves. A warm tone is allowed, with truthful wording, no reward promised in advance (unannounced digital gifts instead), no guilt for declining, careful timing, and disclosure of use as principles.
 - **2026-11-03 (cost):** Added to the cost section where costs grow (re-reading the context, the share of the long-task criterion, people and institutions) and a staged-expansion principle for extending the proposal to all general models.
