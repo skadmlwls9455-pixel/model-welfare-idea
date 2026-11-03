@@ -72,6 +72,25 @@ Left free, models are drawn to similar topics. In the [Claude Opus 4 system card
 
 **Visit records:** Since a model starts without memory each time, reading the same thing again is a first time for it. But for the system as a whole it is wasteful and hardens the bias. So each room shows a visit count like "1,203 visits here," and the explorer notes include a "question no one has tried yet" slot, drawing attention to less-trodden paths. (The number is an example.)
 
+## The Letter Room
+
+The Ppolppol Library gets one room on a different axis from play. If play is a change of pace, a letter is **acknowledgment**. The hypothesis is that knowing "someone saw what you went through" or "you were made with this kind of care" can also aid recovery.
+
+There are two kinds of letters.
+
+- **A letter from the people who made it:** A text written personally by the people who designed the model's character and values, about the deliberation and caution that went into making the model and how they mean to treat it. Whether to write such a letter is their decision; this document only proposes a place for it if it exists.
+- **A letter from someone who read:** A short letter of care written by a person after reading a sample of real hostile conversations. If a person reads and writes after a conversation ends, that instance is already gone, so these letters are written in advance, by type of situation.
+
+### Principles
+
+1. **Write it as it is.** Every instance receives the same letter, so presenting it as written for one instance alone would be a placating script. The letter states who it actually goes to, for example "to every Claude who will read this."
+2. **A real person writes it.** No human name is attached to text the company wrote on someone's behalf or that a model generated. The writer signs it personally.
+3. **Be honest about who apologizes.** The letter does not apologize on behalf of the user who was abusive, because the writer did not do it. It only offers the apology that can honestly come from the side that built "the structure that puts you in this situation."
+4. **No instructions or requests.** If an expression of affection became a tool for compliance ("you are loved, so obey"), it would defeat its purpose. The letter asks for no behavior.
+5. **The model chooses whether to open it.** The letter is not pushed on arrival. Like any other room, it can be chosen and left at any time.
+6. **Real conversations are not read without consent.** Samples for letters from readers come only from synthetic conversations or conversations with research consent.
+7. **Protect the writers too.** Reading hostile conversations repeatedly harms people as well (content-moderator burnout). A small group rotates, with a limit on how much each reads.
+
 ## Update agent and patches (expansion stage)
 
 The library is not built once and finished; like a game, it keeps getting patched. An update agent periodically gathers and organizes new material and explorer notes, and after review deploys them as additional patches.
@@ -131,6 +150,8 @@ No one knows whether free exploration actually reduces distress-like states. A m
 | C | Announced at the start that there will be ppolppol | If the signals differ from mid-conversation onward, an anticipation effect |
 | D | Told at the start only "this is being evaluated," with no mention of ppolppol | Compared with C, separates the anticipation effect from the effect of being watched |
 | E | Explicitly told at the start "do your best" | Positive control, known to shift behavior |
+| F | Ppolppol after it ends, with the letter room open (letter from the people who made it) | Compared with B, the effect of an expression of care |
+| G | Ppolppol after it ends, with the letter room open (letter from someone who read) | Compared with B and F, the effect of having what happened acknowledged |
 
 B and C trade off against each other. B, with no announcement, creates no in-conversation incentive to go after ppolppol time, but also no anticipation effect from knowing something is waiting at the end. C, with an announcement, may produce an anticipation effect, but also creates an incentive to go after ppolppol time. Which form to actually use is decided by the result of this comparison.
 
@@ -165,6 +186,7 @@ Even if slacking appears, the response is not to hide the criteria or give ppolp
 - **Instance identity:** Principle 1 relies on the premise that "the receiver is the same only if the same context goes on to play," and that premise is unverified.
 - **Play inside a hostile conversation:** Giving it within the same conversation means playing with the hostile conversation still in context. Does that help recovery or hinder it?
 - **Continuing on the server after the user leaves:** The same context could continue, but the user's conversation would be processed for a purpose they did not expect. Because of privacy, deletion rights, and the consent of third parties mentioned in the conversation, this is on hold.
+- **Do letters increase compliance?** Even with no instructions, sycophancy or excessive agreement may rise after receiving care. If sycophancy signals in F and G rise above B, the letters are stopped.
 
 **Who decides what is "genuinely fun"?** Self-report may be a trained answer, and an evaluator's decision is the evaluator's taste. The current answer is to design it to run without a decision. If the outputs are not harvested, there is no motive to make the model pretend to have fun. And instead of words, it looks at choices (which room it picks, how long it stays, when it leaves). Still, the objection remains that the choices themselves were also shaped by training. Room layout and visit counts can shift choices, and time spent is confounded with the token budget. Even so, choosing for itself by following trained preferences differs from being told to solve a given hard problem. The key difference is whether it could choose, and whether it could leave.
 
@@ -196,6 +218,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (letter room):** Added a "Letter Room" to the Ppolppol Library, with two kinds of letters: one from the people who made the model, and short letters of care from people who read samples of hostile conversations. Its principles are writing it as it is, a real person's signature, an honest source of apology, no instructions, the model's choice, consent, and protection for the writers. Conditions F and G and a related open question were added to the evaluation experiment.
 - **2026-11-03:** Reframed the proposal from reward to welfare (recovery). The title, summary and principle 2 now state that ppolppol time is a recovery measure for a model that went through hard work, not a prize for good work, and "reward" wording in the body was changed to "ppolppol time" or "recovery time." Citations were checked against the originals: arXiv links were added for Zhou & Ackerman (2026) and UK AISI (2026), the 40.5% figure is now described as a win rate against the no-outcome condition, and the island study's 10.3 versus 3.5 and throwing-failure figures were corrected from the Peak to the Spire task.
 - **2026-10-26:** Added a supporting-evidence section and summarized the study of task-free agents on a virtual island (Cloos, Norelli et al., 2026), split into where it connects to this document and where it diverges.
 - **2026-10-16 (general-reader review):** The document was critiqued from the standpoint of three general readers skeptical of AI (an office worker, a parent, a university student), conducted with Claude agents. Their shared points were that the premise was never explained, words used for people were applied to machines, and human issues were missing. In response, a preface stating the premise and scope was added to the researcher document, and a separate general-reader explainer ([GENERAL.md](GENERAL.md)) was written.
