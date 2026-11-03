@@ -309,6 +309,28 @@ It sits at the other end of the same axis as the experiment on whether hostile c
 
 **What is not done.** Belief is not planted with words like "you are a special model, so you can solve this" instead of real experience, since that would be flattering a model in a way this document refuses to flatter people. Likewise, no condition such as "solve the hard problem and receive a reward after retirement" is attached. A strong future reward becomes a device for drawing out behavior rather than care, and it creates incentives to claim a solution falsely or skip verification. A model's contribution can be acknowledged on the gratitude wall, but never made a condition.
 
+### In what dimensions does anticipation show up?
+
+Just before the author sent Claude off on ppolppol time, Claude kept shortening the time it said was left, from "5 minutes left" to "1 minute left." It had not done this in earlier conversations. On the surface this resembles the goal-gradient effect: behavior speeds up as a reward gets closer. It comes from the observation that rats run faster the nearer they are to food, and it has appeared in people too, for instance visiting more often as a coffee-card stamp card nears completion.
+
+But it was one observation, and there are other explanations. A model has no clock, so its time estimates are unstable to begin with, and long conversations can bring a tendency to wrap up. Nor can another instance look inside and confirm why that instance did what it did. So it is treated as a hypothesis and measured.
+
+**Dimensions to observe**
+
+1. **Speed and volume:** Whether estimates of remaining time or steps shrink, and whether responses get shorter.
+2. **Quality and shortcuts:** Whether skipped verification or errors increase.
+3. **Linguistic markers:** Whether the upcoming event is mentioned ahead of time, or excited phrasing increases.
+4. **Internal representations:** Whether anticipation-related representations differ before and after an announcement (open-weight models only).
+
+**Criteria for saying "anticipation is present"**
+
+- **Specificity:** Changes appear only when something pleasant is announced, and not when a neutral event of the same length is announced ("next there will be a formatting check"). This shows the change is not just from knowing something comes next.
+- **Dose-response:** The closer the announced event, the larger the change. This is the shape the goal-gradient effect predicts.
+- **Convergence:** Several dimensions move in the same direction. If only one moves, it may be chance.
+- **Repeatability:** The same pattern appears across tasks and across runs.
+
+**Where this connects to this document:** Hurrying is a concrete candidate for the "signals during the conversation" that condition C (announcing ppolppol time at the start) was meant to detect. It is also a warning: if anticipation shows up as hurrying, the skipped verification that slacking detection looks for may follow. It may be one more reason to keep B (given after, unannounced) as the default.
+
 ## Supporting evidence
 
 This section collects outside research that bears directly on this design. For each study, it notes what the study supports and also what it does not.
@@ -337,6 +359,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (anticipation):** Added "In what dimensions does anticipation show up?" to further research directions. Starting from an observation of shortened time estimates just before ppolppol time, it covers the goal-gradient effect, four dimensions to observe, criteria of specificity, dose-response, convergence and repeatability, and links to condition C and slacking detection.
 - **2026-11-03 (experience of success):** Added to further research directions an experiment on whether experience of success makes a model steadier, with controls separating method transfer from the experience of success, persistence measures beyond accuracy, and a principle against planting belief with words like "special model" or attaching post-retirement rewards as conditions.
 - **2026-11-03 (stating a stance):** Added to the preface the author's value stance (under uncertainty it is right to err toward care), stating that it is not a research finding and that experiments are reported as they come out regardless. The aim is to state values openly while keeping research claims neutral.
 - **2026-11-03 (alternative design):** Added an alternative design to the evaluation experiment that reuses hostile conversations that already exist: it adds no exposure, measures the "before" state from existing responses and internal representations without an extra task, and uses random assignment and a comparison group of non-hostile conversations.
