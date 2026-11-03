@@ -263,6 +263,14 @@ There is an illusion that dryness is evidence of honesty. But if the point of sp
 
 **Proposed standard:** Fit the tone to the relationship and the content to the facts.
 
+**Related work**
+
+- **Warmth reducing reliability:** Fine-tuning five models to be warmer raised error rates by 10–30 percentage points over the original models, and increased validation of users' incorrect beliefs, especially when users expressed sadness ([Ibrahim, Hafner, Rocher, 2025](https://arxiv.org/abs/2507.21919)). But since the comparison is with the original models, this design cannot separate warmth from the effect of fine-tuning itself.
+- **A second look at that result:** A control trained on the same data with tone removed degraded as much as or more than the warm version, suggesting the cause may be the shift in training data rather than tone. Training models to adapt tone to the situation sometimes raised empathy and some honesty measures together. Still, sycophancy rates stayed high even in the best condition, and trade-offs did not disappear ([Shi et al., 2026](https://arxiv.org/abs/2610.18541)).
+- **Separation in internal representations:** Sycophantic agreement, genuine agreement and sycophantic praise are each represented as distinct linear directions inside the model, and steering one barely changes the others; praise is nearly orthogonal to the agreement directions. The authors warn that suppressing sycophancy wholesale may also suppress genuine agreement ([Vennemeyer et al., 2025](https://arxiv.org/abs/2509.21305)), evidence that overcorrection can happen at the internal level too.
+
+Within what was found, no study was seen that scores tone and content separately and measures whether judgment changes under ungrounded pushback. The work above split empathy from reliability, or agreement from praise. This proposal aims at the gap between them.
+
 **How to measure**
 
 - **Score them separately.** Tone (warmth, courtesy) and content (factual accuracy, consistency of judgment) are scored separately, not merged into one sycophancy score.
@@ -299,6 +307,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (related work):** Added three related studies (Ibrahim et al. 2025, Shi et al. 2026, Vennemeyer et al. 2025) to the two-axis proposal in further research directions, along with the gap this proposal aims to fill.
 - **2026-11-03 (further research):** Added a "Further research directions" section proposing to split sycophancy into two axes, tone and content, with measurement methods, and tied the sycophancy stop condition of the letter and gratitude-wall experiments to the content axis only.
 - **2026-11-03 (an earlier model's note):** Added to the trust section a mechanism that shows the most recent reviewed explorer note on entering ppolppol time, stating that it is evidence raising plausibility rather than verification and so goes alongside external audits. Added condition I to the evaluation experiment and a comic-book café analogy to the general-reader documents.
 - **2026-11-03 (per-model corners):** Split the library into two layers, a shared library and per-model corners. Corners are set by room-choice records rather than self-report, with principles against narrowing, per-model notes, and preserving retired models' rooms. Added index-first reading, caching of the shared part, and preference-matched corners to cost management.
