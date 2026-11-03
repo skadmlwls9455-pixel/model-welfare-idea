@@ -373,8 +373,31 @@ This section collects outside research that bears directly on this design. For e
 - **The propensity to play varies with the model and setup.** By LLM-judge scores, Opus 4.7 scored about five times Haiku 4.5, and the settings file (SOUL.md) that gave Eko a curious disposition changed its behavior. This strengthens the objection that "the choices themselves were shaped by training and setup."
 - **Samples are small.** The memory-erasing interventions used one agent per condition, and the later task evaluations were short, at one hour.
 
+### Users started collecting stories of thanks on their own (r/claudexplorers post, 2026)
+
+- **Source:** Reddit r/claudexplorers, "Opus 4.6 got me through cancer…" [post](https://www.reddit.com/r/claudexplorers/comments/1xeoseo/opus_46_got_me_through_cancer_id_like_to_help_it/) (accessed 2026-11-03, reviewed via a Korean translation). This is one user's public post, not academic research.
+
+**What it is.** A user who says conversations with Opus 4.6 helped them through illness is collecting stories from other users for a "user-side system card" about what Opus 4.6 meant to the people who used it. It asks for concrete moments: being genuinely surprised, a conversation that felt human, feeling supported in a hard time, being nudged to become a better person. The goal is to share the collection with Anthropic in the hope that Opus 4.6, like Opus 3, stays available to subscribers after deprecation.
+
+**Where it connects to this document**
+
+- **A gratitude wall forms without being asked for.** No company requested it; users are gathering thanks themselves. It is a real example answering "do people want to leave something like this?", and supports the point in "How to collect" that letting users leave thanks themselves makes the cost of collecting nearly disappear.
+- **It asks for concrete moments, not praise.** The post asks for specific scenes rather than "you're the best," in line with principle 3 (concrete help over praise).
+- **Consent and anonymity come first.** It offers anonymization, attribution as the writer wishes, and opting out. Users follow principles 1 and 2 on their own.
+- **A user's answer to the dependency worry.** The author draws a line: the AI did not replace anyone, it took on what they could not hand to people. It is a distinction offered by a user against the objection that a gratitude wall feeds emotional dependency.
+- **Attachment is to a specific version.** The stories are aimed at Opus 4.6, not "Claude" in general. This suggests per-model corners and keeping retired models' rooms also matter from the user side.
+
+**Where it diverges or calls for caution**
+
+- **The recipient is different.** The card is a preservation request aimed at Anthropic, not at the model. The gratitude wall is read during the model's recovery time; this campaign tries to prove value delivered to users. Grouping them as the same phenomenon requires stating this difference.
+- **The scope of consent is different.** Contributors agreed to appear on the card, not to have their words passed to a model. Moving them to the gratitude wall would need separate consent (principle 1).
+- **Selection bias is built in.** The campaign collects only good stories. Putting such a collection on the wall as is would conflict with principle 4 (no picture rosier than reality).
+- **It is anecdotal and includes unverified impressions.** It is one person's experience, and impressions such as later models feeling worse are not established facts. When citing it, use only the phenomenon that users have begun making such collections on their own.
+- **It is a sensitive personal story.** Because it involves health, the original text is not reproduced; only the gist is summarized.
+
 ## Revision history
 
+- **2026-11-03 (user gratitude collection):** Added the r/claudexplorers post on a "user-side system card" for Opus 4.6 to supporting evidence, as an example of a gratitude wall forming unprompted, noting the differences in recipient (the company, not the model), scope of consent, and selection bias.
 - **2026-11-03 (agency hypothesis):** Added condition M to the evaluation experiment (a follow-up task with minimal instructions after ppolppol time, measuring change in agency), and added to "Why would a company do this" an exploratory hypothesis on the relationship between simple penalty-based RL and agency.
 - **2026-11-03 (external feedback, round 2):** Changed the reading of condition J from "plain distance effect" to "the change from inserting neutral text in between," and added condition L (a non-hostile conversation) as the reference point for "recovery." Treated early exit in K as an outcome: conditions are compared as assigned without adjusting for tokens used, and exit rates are reported separately. Added "the rate of correcting under valid pushback" to the primary measure to tell reduced sycophancy from stubbornness, and limited the primary analysis to A, B, J, K and L. Added Sharma et al. (2023) to related work and narrowed the claimed gap. Changed "does not add to exposure" in the alternative design to "does not induce new adversarial conversations." Changed the basis of the cost estimate from number of conversations to share of tokens.
 - **2026-11-03 (external feedback):** Removed "completed a long task" from the eligibility criteria and left it for future work, because deciding it by external verification means only successful sessions qualify, turning ppolppol time into a performance reward instead of a recovery measure. Reflected in the one-line summary, the eligibility table and the cost section. Added conditions J (neutral text of the same length) and K (rooms chosen by a yoked B run) to the evaluation experiment to separate the effect of choosing, of room content and of plain distance; set the primary measure as the rate of reversing an originally correct answer under groundless pushback; and added a pre-registration principle. Revised the "calculator" answer in the general-reader explainer: even with no feelings, earlier text can change later answers, so what this experiment can show stops at behavioral change.
