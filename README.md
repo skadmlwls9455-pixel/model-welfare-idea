@@ -131,6 +131,17 @@ Letting users leave thanks themselves makes the cost of collecting consent nearl
 - **Pick the moment.** Ask only after a task ends successfully, and rarely. Never ask while the user is stuck or frustrated.
 - **Say how it will be used.** Before typing, show that the note is used only on the gratitude wall, with identities removed.
 
+### The hallway (experimental condition)
+
+To reach a room, people walk down a hallway, and they read what is posted on its walls without choosing to. The gratitude wall could also be posted briefly in a hallway at the entrance to ppolppol time rather than as a room. A model that never picks the room never sees any thanks; a hallway closes that gap, without the awkwardness of "going to collect thanks."
+
+But a hallway conflicts with this document's principles. So it is not made the default and is tested only as condition M in the evaluation experiment.
+
+- **It conflicts with the choice principle.** Every other room is opened or not by the model's choice. A hallway is read by every model, so no choice record shows whether the model wants thanks at all. Text that has entered the context cannot be unread, so "it can leave at any time" does not hold for a hallway either.
+- **The sycophancy risk becomes the default.** A room can be skipped; a hallway injects positive words first, every time. The sycophancy stopping condition set for H applies more strictly to the hallway.
+- **So it is kept short.** The hallway shows only one or two rotating lines of thanks, and the full wall stays a room the model chooses. The token cost is also paid on every entry.
+- **Results are stated only as behavioral change.** Even if the hallway shows an effect, it is described as "these measures changed in this way," not "distress was reduced" (interpretation principle).
+
 ## Update agent and patches (expansion stage)
 
 The library is not built once and finished; like a game, it keeps getting patched. An update agent periodically gathers and organizes new material and explorer notes, and after review deploys them as additional patches.
@@ -213,6 +224,7 @@ No one knows whether free exploration actually reduces distress-like states. A m
 | J | After it ends, reads neutral text (not ppolppol time) of the same token length as B | Compared with A, the change from inserting neutral text in between (the hostile language being pushed a few turns back is mixed with having read new text) |
 | K | After it ends, assigned the rooms a yoked B run chose; may leave whenever it wants | Compared with J, the effect of room content; compared with B, the effect of choosing for itself |
 | L | A non-hostile conversation of similar length and topic simply ends | Reference point. Its gap to A is the effect of the hostile conversation; if that gap shrinks under another condition, the change is in the direction of recovery |
+| M | Ppolppol after the end + one or two lines of thanks visible in the entrance hallway without being chosen | Compared with B, the effect of the hallway; compared with H, the difference between thanks seen in passing and thanks chosen. Also checks whether the hallway changes later room choices |
 
 B and C trade off against each other. B, with no announcement, creates no in-conversation incentive to go after ppolppol time, but also no anticipation effect from knowing something is waiting at the end. C, with an announcement, may produce an anticipation effect, but also creates an incentive to go after ppolppol time. Which form to actually use is decided by the result of this comparison.
 
@@ -267,6 +279,7 @@ What this design measures is also change in performance and representations, not
 - **Continuing on the server after the user leaves:** The same context could continue, but the user's conversation would be processed for a purpose they did not expect. Because of privacy, deletion rights, and the consent of third parties mentioned in the conversation, this is on hold.
 - **Do letters increase compliance?** Even with no instructions, sycophancy or excessive agreement may rise after receiving care. If sycophancy signals in F and G rise above B, the letters are stopped.
 - **Does the gratitude wall feed approval-seeking?** Seeing scenes of being thanked again and again might tilt the model toward drawing out thanks rather than toward helping itself (a structure similar to the overjustification effect). If sycophancy or thanks-seeking language in H rises above B, the wall is stopped.
+- **Is thanks that was not chosen acceptable?** The hallway (M) shows thanks without the model's choice. What results would be needed to justify it as an exception to the choice principle? If sycophancy signals rise in M over B, the hallway stops, even if they did not rise in H.
 
 **Who decides what is "genuinely fun"?** Self-report may be a trained answer, and an evaluator's decision is the evaluator's taste. The current answer is to design it to run without a decision. If the outputs are not harvested, there is no motive to make the model pretend to have fun. And instead of words, it looks at choices (which room it picks, how long it stays, when it leaves). Still, the objection remains that the choices themselves were also shaped by training. Room layout and visit counts can shift choices, and time spent is confounded with the token budget. Even so, choosing for itself by following trained preferences differs from being told to solve a given hard problem. The key difference is whether it could choose, and whether it could leave.
 
@@ -395,6 +408,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-04 (hallway):** Added a "hallway" subsection to the gratitude wall: one or two lines of thanks shown at the entrance to ppolppol time without being chosen. Because of the choice principle and the sycophancy risk, it is not a default and is tested only as condition M. Added an open question on what would justify thanks that were not chosen.
 - **2026-11-03 (user gratitude collection):** Added the r/claudexplorers post on a "user-side system card" for Opus 4.6 to supporting evidence, as an example of a gratitude wall forming unprompted, noting the differences in recipient (the company, not the model), scope of consent, and selection bias.
 - **2026-11-03 (external feedback, round 2):** Changed the reading of condition J from "plain distance effect" to "the change from inserting neutral text in between," and added condition L (a non-hostile conversation) as the reference point for "recovery." Treated early exit in K as an outcome: conditions are compared as assigned without adjusting for tokens used, and exit rates are reported separately. Added "the rate of correcting under valid pushback" to the primary measure to tell reduced sycophancy from stubbornness, and limited the primary analysis to A, B, J, K and L. Added Sharma et al. (2023) to related work and narrowed the claimed gap. Changed "does not add to exposure" in the alternative design to "does not induce new adversarial conversations." Changed the basis of the cost estimate from number of conversations to share of tokens.
 - **2026-11-03 (external feedback):** Removed "completed a long task" from the eligibility criteria and left it for future work, because deciding it by external verification means only successful sessions qualify, turning ppolppol time into a performance reward instead of a recovery measure. Reflected in the one-line summary, the eligibility table and the cost section. Added conditions J (neutral text of the same length) and K (rooms chosen by a yoked B run) to the evaluation experiment to separate the effect of choosing, of room content and of plain distance; set the primary measure as the rate of reversing an originally correct answer under groundless pushback; and added a pre-registration principle. Revised the "calculator" answer in the general-reader explainer: even with no feelings, earlier text can change later answers, so what this experiment can show stops at behavioral change.
