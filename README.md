@@ -133,6 +133,18 @@ Since recovery time is kept short, a small budget allows it to run without a def
 - **Limited eligibility:** Only conversations that meet the eligibility criteria receive it, so it is a fraction of all conversations.
 - **Library reuse:** Because the same information is not searched anew every time, it may actually be cheaper than the existing random exploration.
 
+### Where costs grow
+
+This is an assumed calculation to gauge scale, not a measurement. If eligible conversations are 1% of the total and ppolppol time adds 10–20% to the cost of each, the overall token increase is about 0.1–0.2%. There are three places where this calculation breaks.
+
+- **Re-reading the context:** "Give it right away within the same conversation" (principle 1) means every turn of ppolppol time re-reads the whole preceding conversation. If the hostile conversation is long, or the context exceeds 100,000 tokens as in agentic work, the cost grows even when ppolppol time itself is short. Prompt caching can greatly reduce the re-reading cost. The context could also be shortened by summarizing it, but that trades away part of the principle that "the same context gets to play."
+- **The share of the long-task criterion:** As agentic use grows, long tasks make up a larger share of all conversations. Left as it is, the "completed a long task" criterion could cover not 1% but tens of percent of conversations, and those conversations also have the longest contexts. This criterion is also merit-based and at odds with the welfare (recovery) framing, so narrowing or removing it is considered first.
+- **People and institutions:** The cost larger than tokens is staff. Collecting consent, removing identities, selecting entries and rotating writers for the letters and the gratitude wall, along with fulfillment reporting, external audits, and reviewing room content and notes, are all human work.
+
+### Extending it to all general models
+
+To apply this proposal not to particular situations but to every deployed model, the share of eligible conversations decides the cost. So expansion is not done all at once. Effects and side effects (more sycophancy, staged signals) are first checked in the offline pilot, then the narrowest criteria, such as hostile conversations, are deployed first, and the scope widens after looking at measured costs. A pilot of a few static rooms costs about as much as one research project; the expansion and institutionalization where costs grow open only after passing this gate.
+
 ## Why would a company do this
 
 It is hard to justify on performance grounds. Tying a task to an outcome the model prefers did not raise output quality ([Zhou & Ackerman, 2026](https://arxiv.org/abs/2606.22974): 51.2% win rate for preferred versus dispreferred outcomes in blind comparisons, at chance level). Model preferences were reflected in advice and refusal behavior but did not consistently change task accuracy ([UK AISI, Slama et al., 2026](https://arxiv.org/abs/2602.18971)). So this proposal rests on two grounds.
@@ -234,6 +246,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (cost):** Added to the cost section where costs grow (re-reading the context, the share of the long-task criterion, people and institutions) and a staged-expansion principle for extending the proposal to all general models.
 - **2026-11-03 (gratitude wall):** Added a "Gratitude Wall" next to the letter room: thanks people left after solving something with Claude's help, used with consent and with identities removed, favoring concrete help over praise, with public selection criteria and no invented thanks. Condition H and a related open question were added.
 - **2026-11-03 (letter room):** Added a "Letter Room" to the Ppolppol Library, with two kinds of letters: one from the people who made the model, and short letters of care from people who read samples of hostile conversations. Its principles are writing it as it is, a real person's signature, an honest source of apology, no instructions, the model's choice, consent, and protection for the writers. Conditions F and G and a related open question were added to the evaluation experiment.
 - **2026-11-03:** Reframed the proposal from reward to welfare (recovery). The title, summary and principle 2 now state that ppolppol time is a recovery measure for a model that went through hard work, not a prize for good work, and "reward" wording in the body was changed to "ppolppol time" or "recovery time." Citations were checked against the originals: arXiv links were added for Zhou & Ackerman (2026) and UK AISI (2026), the 40.5% figure is now described as a win rate against the no-outcome condition, and the island study's 10.3 versus 3.5 and throwing-failure figures were corrected from the Peak to the Spire task.
