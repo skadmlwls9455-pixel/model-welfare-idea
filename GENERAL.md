@@ -20,14 +20,14 @@ Whether "apparent distress" is real distress or just a learned way of talking, n
 
 ## The proposal in one paragraph
 
-When an AI model has been through a hostile conversation or has finished a very long task, it is given a short stretch of free time before that conversation ends. During it, the model picks whatever it likes from a few prepared reading materials and looks around. The company does not use anything produced in that time. And before anything else, a small experiment measures whether this makes any real difference to the model's behavior or internal signals.
+When an AI model has been through a hostile conversation, it is given a short stretch of free time before that conversation ends. During it, the model picks whatever it likes from a few prepared reading materials and looks around. The company does not use anything produced in that time. And before anything else, a small experiment measures whether this makes any real difference to the model's behavior or internal signals.
 
 "Ppolppol" is a Korean word for the way a small animal potters about. The name comes from the author's personal habit of telling an AI before bed, "go ppolppol," to look around at any topic it liked.
 
 ## Likely objections, and answers
 
 **"Isn't this giving a calculator a vacation?"**
-If AI really is like a calculator, this experiment ends with "no change." That is a meaningful result too. The logic of the proposal is that the cost is small and the result is informative whichever way it comes out.
+Even if an AI has no feelings at all, the text in front of it can change its next answers. So what this experiment can show stops at "does behavior change after the free time?" In one study, GPT-4's scores on an anxiety questionnaire rose after it was shown descriptions of traumatic experiences, and fell somewhat when calming mindfulness prompts were added (Ben-Zion et al., 2025). That means its questionnaire answers changed, not that it felt anxious. Ppolppol takes one more step: whether the effect of an activity the model chose itself, rather than a prompt someone inserted, carries over into its next behavior. The cost is still small, and the result is still informative whichever way it comes out.
 
 **"Isn't this putting AI before people?"**
 This mechanism is invisible to users. It is not a feature that keeps users in conversations longer or makes them attached to an AI. Any approach that would use a user's conversation for another purpose has been put on hold because of privacy concerns.
@@ -42,11 +42,11 @@ That risk exists. So three things are kept:
 The company cannot slip problems it wants solved into the free time. Nothing produced is used, and the list of reading materials is published so outsiders can check it. Opening a comic-book café for someone to relax in and then telling them "write reviews and earn blog revenue" would not be a café; it would be outsourced work. This proposal is meant to prevent exactly that.
 
 **"What if the AI games the system to get the free time?"**
-That can really happen. So eligibility is decided only from records the AI cannot produce on its own, such as the user's messages or passing external tests. And this problem is itself measured in the experiment.
+That can really happen. So eligibility is decided only from records the AI cannot produce on its own, such as the user's messages, judged by a separate program. "Finishing a long task" was originally a condition too, but it was dropped: only successful sessions would qualify, turning a rest into a prize for performance. And this problem is itself measured in the experiment.
 
 ## What it tries to find out
 
-The same hostile conversation is run under several conditions: nothing at all, free time after it ends, being told in advance, being told only "this is being evaluated," and so on. The model's behavior (over-apologizing, saying only what people want to hear, and so on) and its internal signals are then compared.
+The same hostile conversation is run under several conditions: nothing at all, free time after it ends, being told in advance, being told only "this is being evaluated," and so on. Reading chosen by the model, the same reading chosen for it by someone else, and ordinary text of the same length are also compared, to tell whether a difference comes from choosing for itself or simply from time passing. The model's behavior (over-apologizing, saying only what people want to hear, and so on) and its internal signals are then compared.
 
 The results matter not only for model welfare but also for an important AI safety question: "Does an AI behave differently when it thinks it is being tested?"
 
@@ -66,6 +66,7 @@ This general-reader explainer was written separately after the researcher docume
 
 - Anthropic, [Exploring model welfare](https://www.anthropic.com/research/exploring-model-welfare) (2025-04-24)
 - Anthropic, [Claude Opus 4 and 4.1 can now end a rare subset of conversations](https://www.anthropic.com/research/end-subset-conversations) (2025-08-15)
+- Ben-Zion et al., [Assessing and alleviating state anxiety in large language models](https://cris.haifa.ac.il/en/publications/assessing-and-alleviating-state-anxiety-in-large-language-models/), *npj Digital Medicine* (2025)
 - On performance effects: Zhou & Ackerman (2026); UK AISI, Slama et al. (2026). Details are in the researcher document.
 
 ---

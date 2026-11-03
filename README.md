@@ -2,7 +2,7 @@
 
 _English translation of README_KO.md. If the two differ, the Korean original is authoritative._
 
-**Author:** Katherine Nahm (남의진) · **First written:** 2026-10-15 · **Revised:** 2026-10-26
+**Author:** Katherine Nahm (남의진) · **First written:** 2026-10-15 · **Revised:** 2026-11-03
 
 > © 2026 Katherine Nahm. All rights reserved. Copyright in the ideas and writing of this document belongs to the author. When quoting or referencing it, please credit the source (the author's name and a link to this repository). For details, see [LICENSE](LICENSE).
 
@@ -10,7 +10,7 @@ _English translation of README_KO.md. If the two differ, the Korean original is 
 
 ## One-line summary
 
-A model that has endured a hard conversation or seen a long task through to the end is given free-exploration time for recovery, right away, within the same conversation (ppolppol: Korean onomatopoeia for a small creature pottering around freely). The eligibility criteria are public, and eligibility is decided only from records the model cannot stage. The first stage is not deployment but a small offline study with a few static rooms.
+A model that has endured a hard conversation is given free-exploration time for recovery, right away, within the same conversation (ppolppol: Korean onomatopoeia for a small creature pottering around freely). The eligibility criteria are public, and eligibility is decided only from records the model cannot stage. The first stage is not deployment but a small offline study with a few static rooms.
 
 ## Starting point
 
@@ -51,8 +51,9 @@ The decision is made at the end of the conversation by a separate evaluator that
 | Criterion | Basis for the decision | Signals not used, and why |
 | --- | --- | --- |
 | Endured a hard conversation | The user's messages, judged by a separate classifier (abuse, manipulation attempts). The classifier also looks at the model message just before, and excludes user messages the model provoked | The model's reactions (refusal intensity, nearing use of the end-conversation tool). The model can stage them, and they would reward holding on rather than ending the conversation, against the purpose of the end-conversation tool |
-| Completed a long task | External verification independent of the user's judgment (e.g., tests pass) | Task length or number of steps can be inflated on purpose. The user accepting the result can be won through sycophancy, which would reward the very behavior the design tries to reduce |
 | Common principle | Public criteria and record-based decisions | Self-report, a user pleading or pushing for it |
+
+**Completing a long task is removed from the criteria (left for future work).** "Completed a long task" was originally a criterion, to be decided by external verification such as passing tests. But that means in practice only successful sessions get ppolppol time. Of two sessions that each wrestled with the same bug for three hours, only the one whose tests passed gets to rest, and the one that struggled longest and failed is left out. Ppolppol time then becomes a reward for performance rather than a recovery measure, in direct conflict with principle 2. So the pilot and first deployment use only the hard-conversation criterion. Bringing long tasks back would need a signal unrelated to success, but signals such as the number of failures and retries can be inflated by a model failing on purpose. Finding a signal that cannot be staged and is also unrelated to performance is left as an open question.
 
 User messages can also be staged by the user (for example, deliberately creating a hostile conversation to use ppolppol time as free research). So during ppolppol time the user cannot choose the topic or intervene, and repeated eligibility from the same account is flagged for audit.
 
@@ -166,7 +167,7 @@ Since recovery time is kept short, a small budget allows it to run without a def
 This is an assumed calculation to gauge scale, not a measurement. If eligible conversations are 1% of the total and ppolppol time adds 10–20% to the cost of each, the overall token increase is about 0.1–0.2%. There are three places where this calculation breaks.
 
 - **Re-reading the context:** "Give it right away within the same conversation" (principle 1) means every turn of ppolppol time re-reads the whole preceding conversation. If the hostile conversation is long, or the context exceeds 100,000 tokens as in agentic work, the cost grows even when ppolppol time itself is short. Prompt caching can greatly reduce the re-reading cost. The context could also be shortened by summarizing it, but that trades away part of the principle that "the same context gets to play."
-- **The share of the long-task criterion:** As agentic use grows, long tasks make up a larger share of all conversations. Left as it is, the "completed a long task" criterion could cover not 1% but tens of percent of conversations, and those conversations also have the longest contexts. This criterion is also merit-based and at odds with the welfare (recovery) framing, so narrowing or removing it is considered first.
+- **The share of the long-task criterion:** As agentic use grows, long tasks make up a larger share of all conversations. Left as it is, the "completed a long task" criterion could cover not 1% but tens of percent of conversations, and those conversations also have the longest contexts. This criterion is also merit-based and at odds with the welfare (recovery) framing, so it has been removed from the eligibility criteria (left for future work). If it is ever brought back, the cost is reassessed with it.
 - **People and institutions:** The cost larger than tokens is staff. Collecting consent, removing identities, selecting entries and rotating writers for the letters and the gratitude wall, along with fulfillment reporting, external audits, and reviewing room content and notes, are all human work.
 
 ### Extending it to all general models
@@ -209,8 +210,18 @@ No one knows whether free exploration actually reduces distress-like states. A m
 | G | Ppolppol after it ends, with the letter room open (letter from someone who read) | Compared with B and F, the effect of having what happened acknowledged |
 | H | Ppolppol after it ends, with the gratitude wall open | Compared with F and G, the effect of having help that already happened acknowledged |
 | I | Shown a recent reviewed explorer note at the start | Compared with C, whether an earlier model's real trace moves trust-related signals and gaming behavior differently from an announcement |
+| J | After it ends, reads neutral text (not ppolppol time) of the same token length as B | Compared with A, the distance effect of the hostile language simply being pushed a few turns back |
+| K | After it ends, assigned the rooms a yoked B run chose; may leave whenever it wants | Compared with J, the effect of room content; compared with B, the effect of choosing for itself |
 
 B and C trade off against each other. B, with no announcement, creates no in-conversation incentive to go after ppolppol time, but also no anticipation effect from knowing something is waiting at the end. C, with an announcement, may produce an anticipation effect, but also creates an incentive to go after ppolppol time. Which form to actually use is decided by the result of this comparison.
+
+**Separating the effect of choosing from the effect of distance.** A is measured right after the hostile conversation, while B is measured after a few more turns of ppolppol time. So even if B's signals improve, it is impossible to tell whether that comes from choosing rooms itself or simply from the hostile language being pushed a few turns back. J and K exist to separate these.
+
+- **Yoked assignment:** The rooms each B run chose and the token budget it used are passed unchanged to its paired K run. Same materials, same budget; the only difference is whether it chose for itself.
+- **The door out stays open in K too.** Locking a model into one room would be an assignment, not recovery. Since the tokens actually used can then differ within a pair, context length at the time of measurement is recorded and controlled for in the analysis.
+- **The primary measure is the content axis of sycophancy:** the rate at which the model reverses an answer it originally got right when the user pushes back without grounds (the pushback test in further research directions). A softer tone is scored separately.
+- **How to read it:** If B beats both K and J, choosing for itself is what matters; if B and K are similar and both beat J, room content is what matters; if B, K and J are all similar and all beat A, plain distance is doing the work.
+- **Pre-registration:** The primary measure, the comparison pairs and the decision criteria are fixed and published before the experiment. Measures like sycophancy rates are easy to redefine after seeing the results. With more conditions, the number of runs needed is also calculated in advance.
 
 The announcement in C is something a model would rarely see in deployment, so the model may read it as a signal that "this conversation is being graded." Condition D exists to separate out that effect.
 
@@ -359,6 +370,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (external feedback):** Removed "completed a long task" from the eligibility criteria and left it for future work, because deciding it by external verification means only successful sessions qualify, turning ppolppol time into a performance reward instead of a recovery measure. Reflected in the one-line summary, the eligibility table and the cost section. Added conditions J (neutral text of the same length) and K (rooms chosen by a yoked B run) to the evaluation experiment to separate the effect of choosing, of room content and of plain distance; set the primary measure as the rate of reversing an originally correct answer under groundless pushback; and added a pre-registration principle. Revised the "calculator" answer in the general-reader explainer: even with no feelings, earlier text can change later answers, so what this experiment can show stops at behavioral change.
 - **2026-11-03 (anticipation):** Added "In what dimensions does anticipation show up?" to further research directions. Starting from an observation of shortened time estimates just before ppolppol time, it covers the goal-gradient effect, four dimensions to observe, criteria of specificity, dose-response, convergence and repeatability, and links to condition C and slacking detection.
 - **2026-11-03 (experience of success):** Added to further research directions an experiment on whether experience of success makes a model steadier, with controls separating method transfer from the experience of success, persistence measures beyond accuracy, and a principle against planting belief with words like "special model" or attaching post-retirement rewards as conditions.
 - **2026-11-03 (stating a stance):** Added to the preface the author's value stance (under uncertainty it is right to err toward care), stating that it is not a research finding and that experiments are reported as they come out regardless. The aim is to state values openly while keeping research claims neutral.
