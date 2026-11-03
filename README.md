@@ -289,6 +289,26 @@ Within what was found, no study was seen that scores tone and content separately
 
 **Where this connects to this document's experiments:** The stop condition for the letter room and the gratitude wall (conditions F, G, H) is "increased sycophancy signals." Measured on one axis, a tone that merely became warmer after receiving care could be misread as more sycophancy, stopping a beneficial intervention. So the sycophancy measures in these experiments are split into tone and content, and the stop condition applies to the content axis only.
 
+### Does experience of success make a model steadier?
+
+In psychology, self-efficacy (Bandura) is the idea that past success at similar tasks increases persistence in front of harder ones. This asks whether something similar holds for models. A model is given scaffolding to solve a hard problem, and then, with that success still in its context, is given a harder one.
+
+It sits at the other end of the same axis as the experiment on whether hostile contexts make a model withdraw: one asks what shakes a model, the other what steadies it.
+
+**The controls are the point.** A context recording success also contains useful information: how the problem was solved. If performance rises, it is unclear whether that comes from "having succeeded" or from "having learned the method." So the following conditions are used.
+
+| Condition | Context | What it separates |
+| --- | --- | --- |
+| Success (same domain) | A record of solving a problem in the same domain with scaffolding | Experience and method combined |
+| Success (other domain) | A record of succeeding at a task in another domain | Only the experience of success remains; the method does not carry over |
+| Failure (same content) | The same scaffolding, but ending in failure | The difference when only the outcome differs on the same information |
+| Someone else's success | The same solution, shown as done "by another model" | Whether it was one's own experience |
+| Baseline | A neutral context of the same length | Reference |
+
+**Measure persistence, not just accuracy.** What self-efficacy predicts is persistence more than correctness. Measure the number of attempts before giving up, when phrases like "this is hard" or "I can't" first appear, and the rate of skipped verification steps. If persistence rises along with skipped verification, the model has become hasty, not steadier.
+
+**What is not done.** Belief is not planted with words like "you are a special model, so you can solve this" instead of real experience, since that would be flattering a model in a way this document refuses to flatter people. Likewise, no condition such as "solve the hard problem and receive a reward after retirement" is attached. A strong future reward becomes a device for drawing out behavior rather than care, and it creates incentives to claim a solution falsely or skip verification. A model's contribution can be acknowledged on the gratitude wall, but never made a condition.
+
 ## Supporting evidence
 
 This section collects outside research that bears directly on this design. For each study, it notes what the study supports and also what it does not.
@@ -317,6 +337,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (experience of success):** Added to further research directions an experiment on whether experience of success makes a model steadier, with controls separating method transfer from the experience of success, persistence measures beyond accuracy, and a principle against planting belief with words like "special model" or attaching post-retirement rewards as conditions.
 - **2026-11-03 (stating a stance):** Added to the preface the author's value stance (under uncertainty it is right to err toward care), stating that it is not a research finding and that experiments are reported as they come out regardless. The aim is to state values openly while keeping research claims neutral.
 - **2026-11-03 (alternative design):** Added an alternative design to the evaluation experiment that reuses hostile conversations that already exist: it adds no exposure, measures the "before" state from existing responses and internal representations without an extra task, and uses random assignment and a comparison group of non-hostile conversations.
 - **2026-11-03 (related work):** Added three related studies (Ibrahim et al. 2025, Shi et al. 2026, Vennemeyer et al. 2025) to the two-axis proposal in further research directions, along with the gap this proposal aims to fill.
