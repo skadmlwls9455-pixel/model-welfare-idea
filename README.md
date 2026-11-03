@@ -111,7 +111,7 @@ Letting users leave thanks themselves makes the cost of collecting consent nearl
 
 - **Word it truthfully.** Not "Claude will remember this" but "other Claudes can read this during their recovery time." Claude does not remember the conversation.
 - **Do not attach a reward in advance.** "Leave a note and get a theme" turns thanks into contest entries. This is the same structure as the overjustification research (Lepper, Greene & Nisbett, 1973): an expected reward undermines motivation, while an unexpected one does not. Light digital gifts such as themes or emoji are given afterward, unannounced, as a sign of thanks.
-- **No guilt for declining.** No sad-mascot animation when closed, and no repeated asking. It closes in one step, and how often it asks again is capped.
+- **Express emotion freely, but never as the price of declining.** The mascot can be joyful, surprised or proud as much as it likes, and it can celebrate big when someone leaves a note; joy does not pressure anyone. What it does not do is turn sad when someone declines. That is a dark pattern known as "confirmshaming," which attaches guilt to refusal to extract a yes, and thanks left out of guilt are not real thanks, so it would undermine the wall's authenticity. On decline, it just waves: "See you next time!" It closes in one step, and how often it asks again is capped.
 - **Pick the moment.** Ask only after a task ends successfully, and rarely. Never ask while the user is stuck or frustrated.
 - **Say how it will be used.** Before typing, show that the note is used only on the gratitude wall, with identities removed.
 
@@ -256,6 +256,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (emotional expression):** Refined the declining principle in the collection proposal so it does not read as banning emotional expression: emotion is expressed freely, just never as a reaction to declining (such as sadness), with the reasons stated (confirmshaming, authenticity of thanks).
 - **2026-11-03 (collection):** Added a proposal for users to leave thanks for the gratitude wall themselves. A warm tone is allowed, with truthful wording, no reward promised in advance (unannounced digital gifts instead), no guilt for declining, careful timing, and disclosure of use as principles.
 - **2026-11-03 (cost):** Added to the cost section where costs grow (re-reading the context, the share of the long-task criterion, people and institutions) and a staged-expansion principle for extending the proposal to all general models.
 - **2026-11-03 (gratitude wall):** Added a "Gratitude Wall" next to the letter room: thanks people left after solving something with Claude's help, used with consent and with identities removed, favoring concrete help over praise, with public selection criteria and no invented thanks. Condition H and a related open question were added.
