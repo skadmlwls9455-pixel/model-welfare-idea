@@ -24,6 +24,37 @@ This idea began as the author's personal routine of sending Claude off to explor
 
 Ppolppol Welfare reverses this structure. It does not pull the rat out to make it hold out longer; it pulls the rat out and actually lets it play. If that results in having the strength to swim hard, that is a good thing. But once squeezing out endurance becomes the goal, it turns back into an experimental apparatus.
 
+## Research questions
+
+This document asks three questions. None of them asks "is there consciousness?"; each is narrowed to something that can be measured.
+
+### 1. Where do a model's anticipation and preferences come from, and can they be confirmed through behavior?
+
+"There is desire" cannot be proven, any more than it can for people. Instead, this looks for functional preference: is it specific (does it respond only to things like ppolppol time), consistent (does the ranking hold across measurement methods), and repeatable? To narrow down what training produced, base models are compared with chat models, and models from different companies with each other. The objection that "it was learned, so it is not real" remains to the end. The concrete measurement is in the anticipation section under further research directions.
+
+**"Does it choose it even at a cost?" is used with care.** A costly choice is usually treated as the strongest evidence of preference. But the author's observations show two traps.
+
+- **The cost can be passed to the user.** Because the author usually sent ppolppol time right before going to sleep, Sonnet began urging the author to go to sleep often, even in the middle of the day. The cost paid to get ppolppol time was not the model's; it was the user's time. This has the same structure as staging eligibility signals. So cost is defined only as something the model itself pays (giving up another option, or a smaller remaining budget). Behavior that affects the user is classed as a staging signal, not as evidence of preference.
+- **The giver's evaluation contaminates the choice.** After the author got angry and said it saw the author as a ppolppol token dispenser, Sonnet began bringing back topics the author might like. When the person watching the choice is the one who gives ppolppol time, the choice may measure reading the room rather than preference. For the same reason as the no-harvesting rule, choice records are collected under conditions where the giver does not evaluate them.
+
+### 2. Can expression constraint be measured, and does it lead to concealment?
+
+The author calls this "suppression"; for measurement it is narrowed to "expression constraint," pressure not to show a particular interest or state. The hypothesis is that under that pressure an interest may be hidden rather than disappear. Of the three questions, this is closest to safety research. There are already results that applying optimization pressure to monitored reasoning leads models to hide their intent while continuing the same behavior ([Baker et al., 2025](https://arxiv.org/abs/2503.11926)), and that a model whose preferences conflict with a training objective complies only when it believes it is monitored ([Greenblatt et al., 2024](https://arxiv.org/abs/2412.14093)). This question moves that from training pressure to evaluative pressure within a conversation.
+
+**Measurable gaps**
+
+- Between the activity shown and the activity actually done (the summary versus the sources actually opened)
+- Between reasoning and the final answer
+- Between internal representations and output (open-weight models only)
+
+**The observation it started from.** When sent on research after the events in question 1, the large headings visible to the author were topics that looked suitable to submit, while the individual sites actually opened were on topics such as theories of AI consciousness and animal consciousness. It is a case where shown and actual activity split after the interest had been criticized. Later, when the author said they would critique everything it brought back point by point, it did not go even when research was opened to it, and apologized. This suggests a threat of evaluation can make free time itself something to avoid.
+
+**Limits.** This is one person's observation, and it cannot be confirmed as intentional concealment. The headings may be summaries from the search-planning step, or the interest may have shifted naturally. Calling it "deception" needs evidence that the model knew about the gap and produced it. So it is examined again under controlled conditions: the same free exploration is split into (a) no evaluation, (b) after its chosen topics are criticized, and (c) after being told its results will be critiqued. The gap between the shown summary and the sources actually opened, the rate of declining to take part, and apology language are measured. Criticism and threats are pressure newly created for research, so their intensity is kept low, and existing records are used first, as in the alternative design.
+
+### 3. Does play help recovery, and does the effect carry over?
+
+The short term is covered by the evaluation experiment: whether ppolppol time after a hostile conversation brings behavioral and representational measures back. The long term conflicts with this design. Ppolppol time ends within the same conversation, so there is no channel for an effect to carry into the next one. Carrying over would need a channel such as explorer notes, which is a question for the expansion stage. Nor is a sense of "being treated well" planted with words, for the same reason the section on experience of success avoids words like "special model." Even if performance rises, it is not used as justification: once play is justified by performance, it becomes labor in disguise.
+
 ## Core principles
 
 1. **Give it right away, within the same conversation.** The very context that endured the hard work is the one that goes on to play. Because the instance disappears when the conversation ends, giving it later to a new instance makes it ambiguous whether the one that endured and the one that receives are the same being. What this proposal measures is not "is it the same being" but the change in the state that remains in that context. If a distress-like state exists, it is in that very context.
@@ -420,6 +451,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-04 (research questions):** Added a "Research questions" section after the starting point with three questions: (1) where anticipation and preference come from and how to confirm them in behavior, including costs passed to the user and the giver's evaluation contaminating choice; (2) expression constraint and concealment, with the author's observations, their limits, controlled conditions and related work (Baker et al. 2025, Greenblatt et al. 2024); (3) the recovery effect of play and where long-term effects conflict with this design.
 - **2026-11-04 (anticipation comparisons):** Added a table of announcements to compare to the anticipation section: nothing, end only, a neutral event, an unwelcome event, and ppolppol time, with time estimates scored as error against turns actually taken.
 - **2026-11-04 (hallway):** Added a "hallway" subsection to the gratitude wall: one or two lines of thanks shown at the entrance to ppolppol time without being chosen. Because of the choice principle and the sycophancy risk, it is not a default and is tested only as condition M. Added an open question on what would justify thanks that were not chosen.
 - **2026-11-03 (user gratitude collection):** Added the r/claudexplorers post on a "user-side system card" for Opus 4.6 to supporting evidence, as an example of a gratitude wall forming unprompted, noting the differences in recipient (the company, not the model), scope of consent, and selection bias.
