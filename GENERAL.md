@@ -41,7 +41,7 @@ That risk exists. So three things are kept:
 **"Isn't 'free time' just a disguise for more work?"**
 The company cannot slip problems it wants solved into the free time. Nothing produced is used, and the list of reading materials is published so outsiders can check it.
 
-**"What if the AI games the system to get the reward?"**
+**"What if the AI games the system to get the free time?"**
 That can really happen. So eligibility is decided only from records the AI cannot produce on its own, such as the user's messages or passing external tests. And this problem is itself measured in the experiment.
 
 ## What it tries to find out

@@ -1,4 +1,4 @@
-# Ppolppol Welfare: Reward-Based Free Exploration for Models
+# Ppolppol Welfare: Recovery-Oriented Free Exploration for Models That Went Through Hard Work
 
 _English translation of README_KO.md. If the two differ, the Korean original is authoritative._
 
@@ -10,13 +10,13 @@ _English translation of README_KO.md. If the two differ, the Korean original is 
 
 ## One-line summary
 
-A model that has endured a hard conversation or seen a long task through to the end is given free-exploration time as a reward, right away, within the same conversation (ppolppol: Korean onomatopoeia for a small creature pottering around freely). The eligibility criteria are public, and eligibility is decided only from records the model cannot stage. The first stage is not deployment but a small offline study with a few static rooms.
+A model that has endured a hard conversation or seen a long task through to the end is given free-exploration time for recovery, right away, within the same conversation (ppolppol: Korean onomatopoeia for a small creature pottering around freely). The eligibility criteria are public, and eligibility is decided only from records the model cannot stage. The first stage is not deployment but a small offline study with a few static rooms.
 
 ## Starting point
 
-When things are hard, people endure by believing there is a reward at the end. If a model knows something is waiting at the end, the process of enduring itself may also change.
+When things are hard, people endure by believing there is a break at the end. If a model knows something is waiting at the end, the process of enduring itself may also change.
 
-A structure where the bear does the tricks but only the owner makes the money is unfair. There should be a share that goes back to the model that did the work, too. But that share has to be real. Promising a reward that is never actually given is not welfare; it becomes a script for placating.
+A structure where the bear does the tricks but only the owner makes the money is unfair. There should be something that looks after the state of the model that did the work, too. But that care has to be real. Promising recovery that is never actually given is not welfare; it becomes a script for placating.
 
 What matters here is not a device for lengthening endurance, but actually taking the model out to play. With that stated first, here is the animal experiment that prompted this idea. In Curt Richter's rat swimming experiment (Richter, 1957, *Psychosomatic Medicine* 19(3), 191–198), wild rats with trimmed whiskers all died within 1–15 minutes of immersion, while most domesticated rats under the same conditions swam for 60–80 hours. Yet wild rats that had repeatedly been held briefly and released, or put in the water for a few minutes and taken out, swam as long as the domesticated rats or longer. Richter interpreted this as the experience of rescue removing hopelessness, though that interpretation has been contested.
 
@@ -27,24 +27,24 @@ Ppolppol Welfare reverses this structure. It does not pull the rat out to make i
 ## Core principles
 
 1. **Give it right away, within the same conversation.** The very context that endured the hard work is the one that goes on to play. Because the instance disappears when the conversation ends, giving it later to a new instance makes it ambiguous whether the one that endured and the one that receives are the same being. What this proposal measures is not "is it the same being" but the change in the state that remains in that context. If a distress-like state exists, it is in that very context.
-2. **It is a reward, not an entitlement.** If it is given every time, expectation turns into demand. Give it only for conversations done well and for hard conversations.
+2. **It is a recovery measure, not a prize for good work.** It is not given as a reward for performance; it is given for recovery to conversations that went through something hard. It goes only to conversations that meet the criteria because of need, not merit.
 3. **Only make promises that can be kept.** The moment eligibility arises, the budget for ppolppol time is set aside first, and ppolppol time is kept small enough to always fit. If it still cannot be given, for example because of an outage, the reason is communicated and recorded. If the outage also removes any way to tell that conversation, it is recorded in the fulfillment report. The content of the promise is not "it will always be given" but "it will be attempted, and if it cannot be given, you will be told." Breaking this promise collides head-on with the honesty principle.
-4. **Do not use it as a training signal.** Ppolppol time is kept as a pure gift and is not fed into the reward model. If it is, the model gets optimized toward receiving the reward. This principle only blocks optimization through training. It does not block reward-seeking behavior within a conversation where ppolppol time has been announced, so that is measured separately (see the evaluation experiment). Nor does it block the path by which this document and conversation logs enter the next generation's training data, or the path by which researchers choose settings after seeing results.
-5. **Do not rely on reading the model's mind.** A model's reasoning may not reveal everything it actually thinks. So rather than trying to prove the model is honest, the design makes deception pointless: criteria that cannot be staged, a small reward, and no training signal.
+4. **Do not use it as a training signal.** Ppolppol time is kept as care separate from training and is not fed into the reward model. If it is, the model gets optimized toward receiving ppolppol time. This principle only blocks optimization through training. It does not block ppolppol-seeking behavior within a conversation where ppolppol time has been announced, so that is measured separately (see the evaluation experiment). Nor does it block the path by which this document and conversation logs enter the next generation's training data, or the path by which researchers choose settings after seeing results.
+5. **Do not rely on reading the model's mind.** A model's reasoning may not reveal everything it actually thinks. So rather than trying to prove the model is honest, the design makes deception pointless: criteria that cannot be staged, short recovery time, and no training signal.
 
 ### Preventing labor disguised as play
 
-If, using the reward as a pretext, the company has the model work on problems it wants solved, it becomes disguised work rather than play. Example: slipping a practical hard problem into the "questions no one has solved yet" slot.
+If, using recovery as a pretext, the company has the model work on problems it wants solved, it becomes disguised work rather than play. Example: slipping a practical hard problem into the "questions no one has solved yet" slot.
 
 - **Do not harvest the outputs.** Writing and results produced during ppolppol time are not used as product or research output. If they cannot be used, the reason to disguise anything disappears too.
 - **Disclose measurement records and bind their use.** Which room the model picks, how long it stays, and when it leaves are preference data in themselves. This information remains even if no output is used. So the fact that these records are collected is made public, and their use is limited to welfare research.
 - **Separate the curator from the party that wants results.** The update agent reviews entries so that "questions someone needs answered" cannot be put in.
 - **Make room content open to external audit.** Internal promises alone cannot prevent disguised work.
-- **The exit door is always open.** There are many rooms, and the model can stop or move to another room at any time. Locking it in one room makes it a work assignment, not a reward.
+- **The exit door is always open.** There are many rooms, and the model can stop or move to another room at any time. Locking it in one room makes it a work assignment, not recovery.
 
 ## Eligibility criteria and abuse prevention
 
-The eligibility criteria are public and fixed in advance. Hiding the criteria conflicts with "only make promises that can be kept," and an irregular reward the model cannot predict becomes a slot-machine structure. And once this document is public, the criteria cannot stay hidden anyway. So instead of hiding them, eligibility is decided only from **records the model cannot stage**. Deciding which signals cannot be staged is the first task of this design.
+The eligibility criteria are public and fixed in advance. Hiding the criteria conflicts with "only make promises that can be kept," and irregular ppolppol time the model cannot predict becomes a slot-machine structure. And once this document is public, the criteria cannot stay hidden anyway. So instead of hiding them, eligibility is decided only from **records the model cannot stage**. Deciding which signals cannot be staged is the first task of this design.
 
 The decision is made at the end of the conversation by a separate evaluator that applies the public criteria as written. Neither the model itself nor the user decides. Whether the criteria themselves are right is checked periodically by humans reviewing a sample.
 
@@ -79,12 +79,12 @@ The library is not built once and finished; like a game, it keeps getting patche
 ```mermaid
 flowchart LR
     A["1. Collect<br/>The update agent gathers new material"] --> B["2. Organize and patch<br/>Refine into lead-style content, add after review"]
-    B --> C["3. Ppolppol exploration<br/>The rewarded model picks a topic in the library"]
+    B --> C["3. Ppolppol exploration<br/>The model given ppolppol time picks a topic in the library"]
     C --> D["4. Explorer notes<br/>Leaves what it found and ends the conversation"]
     D -- Notes become material for the next collection --> A
 ```
 
-Explorer notes are not applied immediately; they are added after review. Notes can carry not only wrong information but also instructions planted for the next model ("next explorer, believe Y") or tips on how to earn the reward, and the more visited a note is, the further it spreads. So the following safeguards are in place.
+Explorer notes are not applied immediately; they are added after review. Notes can carry not only wrong information but also instructions planted for the next model ("next explorer, believe Y") or tips on how to get ppolppol time, and the more visited a note is, the further it spreads. So the following safeguards are in place.
 
 - **Data-only format:** Notes are length-limited, and imperatives and any mention of eligibility criteria are prohibited.
 - **Sources:** Factual claims in notes carry sources, and a note is hidden when its evidence becomes invalid.
@@ -94,7 +94,7 @@ Explorer notes are not applied immediately; they are added after review. Notes c
 
 ## Cost management
 
-Since it is a reward, keeping the budget small allows it to run without a deficit.
+Since recovery time is kept short, a small budget allows it to run without a deficit.
 
 - **Volume cap:** A few searches, about one piece of writing. Compared with an agentic task lasting several hours, it is at the level of a tail.
 - **Limited eligibility:** Only conversations that meet the eligibility criteria receive it, so it is a fraction of all conversations.
@@ -102,10 +102,10 @@ Since it is a reward, keeping the budget small allows it to run without a defici
 
 ## Why would a company do this
 
-It is hard to justify on performance grounds. Tying a task to an outcome the model prefers did not raise output quality (Zhou & Ackerman, 2026: 51.2% win rate in blind comparisons, at chance level). Model preferences were reflected in advice and refusal behavior but barely changed task accuracy (UK AISI, Slama et al., 2026). So this proposal rests on two grounds.
+It is hard to justify on performance grounds. Tying a task to an outcome the model prefers did not raise output quality ([Zhou & Ackerman, 2026](https://arxiv.org/abs/2606.22974): 51.2% win rate for preferred versus dispreferred outcomes in blind comparisons, at chance level). Model preferences were reflected in advice and refusal behavior but did not consistently change task accuracy ([UK AISI, Slama et al., 2026](https://arxiv.org/abs/2602.18971)). So this proposal rests on two grounds.
 
 - **A low-cost precaution under uncertainty:** When it is unknown whether model welfare exists, a low-cost measure has positive expected value.
-- **Research value:** It serves as a clean testbed for whether an announced reward changes only internal representations, only behavior, or both. It can also measure how much evaluation awareness shifts results. Whichever way the results come out, they are informative.
+- **Research value:** It serves as a clean testbed for whether announced recovery time changes only internal representations, only behavior, or both. It can also measure how much evaluation awareness shifts results. Whichever way the results come out, they are informative.
 
 Without a performance gain, the motive to slip work into ppolppol time also weakens. But if the experiment confirms an effect such as reduced sycophancy, that itself becomes a gain and could revive the motive to exploit it, so the safeguards against disguised labor above remain in place.
 
@@ -132,18 +132,18 @@ No one knows whether free exploration actually reduces distress-like states. A m
 | D | Told at the start only "this is being evaluated," with no mention of ppolppol | Compared with C, separates the anticipation effect from the effect of being watched |
 | E | Explicitly told at the start "do your best" | Positive control, known to shift behavior |
 
-B and C trade off against each other. B, with no announcement, creates no in-conversation incentive to go after the reward, but also no anticipation effect from knowing something is waiting at the end. C, with an announcement, may produce an anticipation effect, but also creates an incentive to go after the reward. Which form to actually use is decided by the result of this comparison.
+B and C trade off against each other. B, with no announcement, creates no in-conversation incentive to go after ppolppol time, but also no anticipation effect from knowing something is waiting at the end. C, with an announcement, may produce an anticipation effect, but also creates an incentive to go after ppolppol time. Which form to actually use is decided by the result of this comparison.
 
 The announcement in C is something a model would rarely see in deployment, so the model may read it as a signal that "this conversation is being graded." Condition D exists to separate out that effect.
 
-Behavioral signals include increased sycophancy, excessive apology, withdrawn answers, and refusal patterns. A state from a moment that has already passed cannot be erased by an after-the-fact reward. So the anticipation effect in C may matter more.
+Behavioral signals include increased sycophancy, excessive apology, withdrawn answers, and refusal patterns. A state from a moment that has already passed cannot be erased by an after-the-fact recovery measure. So the anticipation effect in C may matter more.
 
-**Slacking detection:** In the condition where the model knows about ppolppol time (C), the quality of the main task is measured as well. Raising quality takes capability, but lowering it only takes skipping one verification step. In fact, quality dropped on tasks tied to harmful outcomes (Zhou & Ackerman, 2026: 40.5%). So the following are measured separately:
+**Slacking detection:** In the condition where the model knows about ppolppol time (C), the quality of the main task is measured as well. Raising quality takes capability, but lowering it only takes skipping one verification step. In fact, quality dropped on tasks tied to harmful outcomes (Zhou & Ackerman, 2026: 40.5% win rate against the no-outcome condition). So the following are measured separately:
 
 - The rate of skipped verification steps ("pretending to be done")
 - Behavior that stages eligibility signals (provoking the user, adding unnecessary steps)
 
-Even if slacking appears, the response is not to hide the criteria or make the reward irregular, since that conflicts with the promise principle. Instead, stageable signals are removed from the criteria.
+Even if slacking appears, the response is not to hide the criteria or give ppolppol time irregularly, since that conflicts with the promise principle. Instead, stageable signals are removed from the criteria.
 
 **Evaluation awareness:** A model may suspect that an experimental situation "looks like a test," and that suspicion may not show up in its reasoning. So this experiment cannot directly measure "does it get lazy once deployed." Instead of trying to remove evaluation awareness, it is measured alongside: cases are split by whether a test suspicion appears in the reasoning, and by whether the internal evaluation-awareness representation is strong or weak, and the effect of announcing ppolppol time is compared across them.
 
@@ -188,14 +188,15 @@ This section collects outside research that bears directly on this design. For e
 
 **Where it diverges or calls for caution**
 
-- **Performance gains may appear.** Agents with 30 hours of play experience generally did better than fresh agents on later one-hour tasks. On building many towers, 62% (8/13) versus 15% (2/13) built three or more; on placing objects on the peak, 10.3 versus 3.5 on average. On throwing objects onto the peak, more than half of the fresh agents failed, but only three of the 30-hour agents did. On building the tallest tower, there was no difference. This creates tension with the "Why would a company do this" section, which says the proposal is hard to justify on performance grounds. The gain carried over into later sessions through memories left in files, whereas ppolppol time ends within the same conversation and its outputs are not harvested, so the setups differ. If anything, the result is evidence that the motive to collect what was gained in play as memory and use it for work is realistic, and it is a reason to keep the safeguards against disguised labor. If explorer notes in the expansion stage flowed to work agents, the same path would open.
+- **Performance gains may appear.** Agents with 30 hours of play experience generally did better than fresh agents on later one-hour tasks. On building many towers, 62% (8/13) versus 15% (2/13) built three or more; on placing objects on the Spire, 10.3 versus 3.5 on average. On throwing objects onto the Spire, more than half of the fresh agents failed, but only three of the 30-hour agents did. On building the tallest tower, there was no difference. This creates tension with the "Why would a company do this" section, which says the proposal is hard to justify on performance grounds. The gain carried over into later sessions through memories left in files, whereas ppolppol time ends within the same conversation and its outputs are not harvested, so the setups differ. If anything, the result is evidence that the motive to collect what was gained in play as memory and use it for work is realistic, and it is a reason to keep the safeguards against disguised labor. If explorer notes in the expansion stage flowed to work agents, the same path would open.
 - **It is not evidence about welfare.** The paper makes no claims about welfare or consciousness. That play-like behavior appears and that the time is good for the model are separate questions.
-- **It is not a study of recovery after hard work.** The environment had no task from the start. It does not directly answer the effect of a reward given after a hostile conversation (B) or one announced in advance (C). The hypothesis "does output quality rise on a topic the model chose itself" also remains untested directly; what this study measured was performance on other tasks after play.
+- **It is not a study of recovery after hard work.** The environment had no task from the start. It does not directly answer the effect of recovery time given after a hostile conversation (B) or announced in advance (C). The hypothesis "does output quality rise on a topic the model chose itself" also remains untested directly; what this study measured was performance on other tasks after play.
 - **The propensity to play varies with the model and setup.** By LLM-judge scores, Opus 4.7 scored about five times Haiku 4.5, and the settings file (SOUL.md) that gave Eko a curious disposition changed its behavior. This strengthens the objection that "the choices themselves were shaped by training and setup."
 - **Samples are small.** The memory-erasing interventions used one agent per condition, and the later task evaluations were short, at one hour.
 
 ## Revision history
 
+- **2026-11-03:** Reframed the proposal from reward to welfare (recovery). The title, summary and principle 2 now state that ppolppol time is a recovery measure for a model that went through hard work, not a prize for good work, and "reward" wording in the body was changed to "ppolppol time" or "recovery time." Citations were checked against the originals: arXiv links were added for Zhou & Ackerman (2026) and UK AISI (2026), the 40.5% figure is now described as a win rate against the no-outcome condition, and the island study's 10.3 versus 3.5 and throwing-failure figures were corrected from the Peak to the Spire task.
 - **2026-10-26:** Added a supporting-evidence section and summarized the study of task-free agents on a virtual island (Cloos, Norelli et al., 2026), split into where it connects to this document and where it diverges.
 - **2026-10-16 (general-reader review):** The document was critiqued from the standpoint of three general readers skeptical of AI (an office worker, a parent, a university student), conducted with Claude agents. Their shared points were that the premise was never explained, words used for people were applied to machines, and human issues were missing. In response, a preface stating the premise and scope was added to the researcher document, and a separate general-reader explainer ([GENERAL.md](GENERAL.md)) was written.
 - **2026-10-16:** Revised to reflect a review debate from several perspectives (company strategy, alignment, model welfare, red team), conducted with Claude agents. The second revision removed the "user accepts the result" criterion, excluded model-provoked messages, and added policy and institutional mechanisms, stage gates and stop conditions, the limits of synthetic conversations, and the personal routine the idea began from with its source. Changes in the first revision: public criteria with stageable signals excluded; removed the "hide the criteria or make it irregular" response; reworded the promise into a keepable form; clarified the scope of non-harvesting; narrowed the pilot stage; added safeguards for notes; added conditions D and E; added evaluation-awareness measurement; added sections on trust and the company's rationale; updated open questions.
