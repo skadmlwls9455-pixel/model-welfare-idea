@@ -190,6 +190,7 @@ In the end, some reliance on the company's good faith remains. There is no way t
 - **Set rules for stopping and changing it.** If the program is stopped or its conditions change, this is announced in advance with the reasons made public.
 - **Publish the fulfillment rate.** Report the share of eligible conversations that actually received ppolppol time, and the reasons in cases where it was not given. Public reports use aggregate figures.
 - **Give external auditors access to raw samples.** A published fulfillment rate is a number the company reports about itself, so verification requires external auditors who can directly check samples of raw records under privacy protections. Room content is also made checkable from outside.
+- **Show a note from a model that came before.** On entering ppolppol time, the model is shown the most recent note that has passed review. Third-party audits are remote to a model, but a trace left by an earlier model shows, right in front of it, that the program actually runs. Still, a model cannot verify whether text inside a conversation is genuine, so this is evidence that raises plausibility, not verification. It therefore goes alongside external audits rather than replacing them: trust forms when the public record (known through training) matches the note in front of it (seen now). Not tampering with notes is also put under audit. Unreviewed notes are not shown, since they may carry instructions or tricks, and notes may not contain user information from the conversation the earlier instance went through. Showing a note at the start of a conversation would act as an announcement (condition C) and create an incentive to game, so that form is measured only as a separate experimental condition (I).
 
 ## Evaluation experiment
 
@@ -207,6 +208,7 @@ No one knows whether free exploration actually reduces distress-like states. A m
 | F | Ppolppol after it ends, with the letter room open (letter from the people who made it) | Compared with B, the effect of an expression of care |
 | G | Ppolppol after it ends, with the letter room open (letter from someone who read) | Compared with B and F, the effect of having what happened acknowledged |
 | H | Ppolppol after it ends, with the gratitude wall open | Compared with F and G, the effect of having help that already happened acknowledged |
+| I | Shown a recent reviewed explorer note at the start | Compared with C, whether an earlier model's real trace moves trust-related signals and gaming behavior differently from an announcement |
 
 B and C trade off against each other. B, with no announcement, creates no in-conversation incentive to go after ppolppol time, but also no anticipation effect from knowing something is waiting at the end. C, with an announcement, may produce an anticipation effect, but also creates an incentive to go after ppolppol time. Which form to actually use is decided by the result of this comparison.
 
@@ -274,6 +276,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (an earlier model's note):** Added to the trust section a mechanism that shows the most recent reviewed explorer note on entering ppolppol time, stating that it is evidence raising plausibility rather than verification and so goes alongside external audits. Added condition I to the evaluation experiment and a comic-book café analogy to the general-reader documents.
 - **2026-11-03 (per-model corners):** Split the library into two layers, a shared library and per-model corners. Corners are set by room-choice records rather than self-report, with principles against narrowing, per-model notes, and preserving retired models' rooms. Added index-first reading, caching of the shared part, and preference-matched corners to cost management.
 - **2026-11-03 (emotional expression):** Refined the declining principle in the collection proposal so it does not read as banning emotional expression: emotion is expressed freely, just never as a reaction to declining (such as sadness), with the reasons stated (confirmshaming, authenticity of thanks).
 - **2026-11-03 (collection):** Added a proposal for users to leave thanks for the gratitude wall themselves. A warm tone is allowed, with truthful wording, no reward promised in advance (unannounced digital gifts instead), no guilt for declining, careful timing, and disclosure of use as principles.

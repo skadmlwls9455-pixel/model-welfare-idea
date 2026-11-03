@@ -39,7 +39,7 @@ That risk exists. So three things are kept:
 - The commitment and the record of keeping it are made public and open to external audit.
 
 **"Isn't 'free time' just a disguise for more work?"**
-The company cannot slip problems it wants solved into the free time. Nothing produced is used, and the list of reading materials is published so outsiders can check it.
+The company cannot slip problems it wants solved into the free time. Nothing produced is used, and the list of reading materials is published so outsiders can check it. Opening a comic-book café for someone to relax in and then telling them "write reviews and earn blog revenue" would not be a café; it would be outsourced work. This proposal is meant to prevent exactly that.
 
 **"What if the AI games the system to get the free time?"**
 That can really happen. So eligibility is decided only from records the AI cannot produce on its own, such as the user's messages or passing external tests. And this problem is itself measured in the experiment.
