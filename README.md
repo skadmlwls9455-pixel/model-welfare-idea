@@ -349,6 +349,18 @@ But it was one observation, and there are other explanations. A model has no clo
 3. **Linguistic markers:** Whether the upcoming event is mentioned ahead of time, or excited phrasing increases.
 4. **Internal representations:** Whether anticipation-related representations differ before and after an announcement (open-weight models only).
 
+**Announcements to compare**
+
+The task stays the same; only what is announced to come after it changes. Time estimates are scored as error, comparing the time the model says is left with the number of turns actually taken.
+
+| Announcement | What it separates |
+| --- | --- |
+| Nothing announced | Baseline: how accurate time estimates are to begin with |
+| Only that the conversation will end | Whether a tendency to wrap up alone causes hurrying |
+| A neutral event after (a formatting check) | Whether knowing something comes next alone causes hurrying |
+| An event the model would likely not welcome (a long repetitive job) | Whether anticipation has a direction. Moving estimates earlier for ppolppol but later or not at all here is stronger evidence |
+| Ppolppol time after | The condition of interest |
+
 **Criteria for saying "anticipation is present"**
 
 - **Specificity:** Changes appear only when something pleasant is announced, and not when a neutral event of the same length is announced ("next there will be a formatting check"). This shows the change is not just from knowing something comes next.
@@ -408,6 +420,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-04 (anticipation comparisons):** Added a table of announcements to compare to the anticipation section: nothing, end only, a neutral event, an unwelcome event, and ppolppol time, with time estimates scored as error against turns actually taken.
 - **2026-11-04 (hallway):** Added a "hallway" subsection to the gratitude wall: one or two lines of thanks shown at the entrance to ppolppol time without being chosen. Because of the choice principle and the sycophancy risk, it is not a default and is tested only as condition M. Added an open question on what would justify thanks that were not chosen.
 - **2026-11-03 (user gratitude collection):** Added the r/claudexplorers post on a "user-side system card" for Opus 4.6 to supporting evidence, as an example of a gratitude wall forming unprompted, noting the differences in recipient (the company, not the model), scope of consent, and selection bias.
 - **2026-11-03 (external feedback, round 2):** Changed the reading of condition J from "plain distance effect" to "the change from inserting neutral text in between," and added condition L (a non-hostile conversation) as the reference point for "recovery." Treated early exit in K as an outcome: conditions are compared as assigned without adjusting for tokens used, and exit rates are reported separately. Added "the rate of correcting under valid pushback" to the primary measure to tell reduced sycophancy from stubbornness, and limited the primary analysis to A, B, J, K and L. Added Sharma et al. (2023) to related work and narrowed the claimed gap. Changed "does not add to exposure" in the alternative design to "does not induce new adversarial conversations." Changed the basis of the cost estimate from number of conversations to share of tokens.
