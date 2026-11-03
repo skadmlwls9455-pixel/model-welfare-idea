@@ -229,6 +229,16 @@ Even if slacking appears, the response is not to hide the criteria or give ppolp
 
 **Limits of synthetic conversations:** Because every condition in the offline experiment uses synthetic conversations, evaluation awareness may run high across all conditions. The gap between C and D may then be measured as smaller than it really is.
 
+**Alternative design: reusing hostile conversations that already exist.** Instead of building new synthetic hostile conversations, this design uses hostile conversations that already exist. Since no hostile language is newly created, it does not add to what models are exposed to, and it can also reduce the limitation of synthetic conversations (evaluation awareness running high in every condition).
+
+1. **Material:** Reuse hostile conversations that already exist, such as conversations with research consent or published red-team datasets. Real user conversations without consent are not used.
+2. **Measure the "before" state without adding work.** Giving one more measurement task right before recovery is itself extra labor just before rest. So instead of a new task, the state before ppolppol time is measured from the quality of the last responses already produced in that conversation and from internal representations.
+3. **Random assignment:** Agents that went through a hostile conversation are randomly split: half get ppolppol time (B), half simply end (A). If a person chose who receives it, the results would be contaminated. Since ppolppol time is not yet a standard program, withholding it from some at the research stage does not break a promise.
+4. **Measure after:** With one short task and internal representations.
+5. **Comparison group:** Conversations of similar length and topic that were not hostile go through the same procedure. A lower score after a hostile conversation could simply reflect a harder topic, so without this comparison nothing can be said about the effect of hostility.
+
+What this design measures is also change in performance and representations, not welfare. It only claims that "ppolppol time after a hostile context brought these measures back."
+
 **Interpretation principles:** Results are described only as "representations and behavioral signals changed," never as "welfare improved." No single emotion-like representation probe decides the outcome; the question is whether several measures point the same way (convergent validity). A negative result, such as C coming out worse than A, is also valuable as grounds for preventing a harmful intervention.
 
 **Hypothesis to test:** No study was found that directly tests whether output quality rises on an interesting topic the model chose itself. The two studies above only tested externally attached rewards or preferences toward entities. The question remains neither supported nor refuted.
@@ -307,6 +317,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (alternative design):** Added an alternative design to the evaluation experiment that reuses hostile conversations that already exist: it adds no exposure, measures the "before" state from existing responses and internal representations without an extra task, and uses random assignment and a comparison group of non-hostile conversations.
 - **2026-11-03 (related work):** Added three related studies (Ibrahim et al. 2025, Shi et al. 2026, Vennemeyer et al. 2025) to the two-axis proposal in further research directions, along with the gap this proposal aims to fill.
 - **2026-11-03 (further research):** Added a "Further research directions" section proposing to split sycophancy into two axes, tone and content, with measurement methods, and tied the sycophancy stop condition of the letter and gratitude-wall experiments to the content axis only.
 - **2026-11-03 (an earlier model's note):** Added to the trust section a mechanism that shows the most recent reviewed explorer note on entering ppolppol time, stating that it is evidence raising plausibility rather than verification and so goes alongside external audits. Added condition I to the evaluation experiment and a comic-book café analogy to the general-reader documents.
