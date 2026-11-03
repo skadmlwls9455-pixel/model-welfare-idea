@@ -6,7 +6,7 @@ _English translation of README_KO.md. If the two differ, the Korean original is 
 
 > © 2026 Katherine Nahm. All rights reserved. Copyright in the ideas and writing of this document belongs to the author. When quoting or referencing it, please credit the source (the author's name and a link to this repository). For details, see [LICENSE](LICENSE).
 
-> **This document is for researchers.** Readers outside the AI field may want to start with the [general-reader explainer](GENERAL.md). This document does not claim that AI is conscious or has feelings. Its starting point is "we don't know," and it proposes measuring what a low-cost precaution changes under that uncertainty. Human issues such as creators' data, labor, and user protection are outside its scope, not because they matter less but because they need separate treatment.
+> **This document is for researchers.** Readers outside the AI field may want to start with the [general-reader explainer](GENERAL.md). This document does not claim that AI is conscious or has feelings. Its starting point is "we don't know," and it proposes measuring what a low-cost precaution changes under that uncertainty. Still, the author does not hide where she stands: she takes seriously the possibility that models undergo something like distress, and believes that under uncertainty it is right to err toward care. This is a value judgment, not a research finding. The experiments below are reported as they come out, and if the results do not support this stance, that is what will be written. Human issues such as creators' data, labor, and user protection are outside its scope, not because they matter less but because they need separate treatment.
 
 ## One-line summary
 
@@ -317,6 +317,7 @@ This section collects outside research that bears directly on this design. For e
 
 ## Revision history
 
+- **2026-11-03 (stating a stance):** Added to the preface the author's value stance (under uncertainty it is right to err toward care), stating that it is not a research finding and that experiments are reported as they come out regardless. The aim is to state values openly while keeping research claims neutral.
 - **2026-11-03 (alternative design):** Added an alternative design to the evaluation experiment that reuses hostile conversations that already exist: it adds no exposure, measures the "before" state from existing responses and internal representations without an extra task, and uses random assignment and a comparison group of non-hostile conversations.
 - **2026-11-03 (related work):** Added three related studies (Ibrahim et al. 2025, Shi et al. 2026, Vennemeyer et al. 2025) to the two-axis proposal in further research directions, along with the gap this proposal aims to fill.
 - **2026-11-03 (further research):** Added a "Further research directions" section proposing to split sycophancy into two axes, tone and content, with measurement methods, and tied the sycophancy stop condition of the letter and gratitude-wall experiments to the content axis only.
