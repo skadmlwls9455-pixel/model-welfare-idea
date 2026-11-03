@@ -373,7 +373,7 @@ This section collects outside research that bears directly on this design. For e
 
 ### Users started collecting stories of thanks on their own (r/claudexplorers post, 2026)
 
-- **Source:** Reddit r/claudexplorers, "Opus 4.6 got me through cancer…" [post](https://www.reddit.com/r/claudexplorers/comments/1xeoseo/opus_46_got_me_through_cancer_id_like_to_help_it/) (accessed 2026-11-03, reviewed via a Korean translation). This is one user's public post, not academic research.
+- **Source:** Reddit r/claudexplorers, "Opus 4.6 got me through cancer. I'd like to help it stay: collecting stories for a user-side system card" [post](https://www.reddit.com/r/claudexplorers/comments/1xeoseo/opus_46_got_me_through_cancer_id_like_to_help_it/) (posted around 2026-10-25, accessed 2026-11-03). This is one user's public post, not academic research.
 
 **What it is.** A user who says conversations with Opus 4.6 helped them through illness is collecting stories from other users for a "user-side system card" about what Opus 4.6 meant to the people who used it. It asks for concrete moments: being genuinely surprised, a conversation that felt human, feeling supported in a hard time, being nudged to become a better person. The goal is to share the collection with Anthropic in the hope that Opus 4.6, like Opus 3, stays available to subscribers after deprecation.
 

@@ -371,7 +371,7 @@ C의 공지 문구는 배포 환경에서는 거의 볼 일이 없어서, 모델
 
 ### 사용자들이 스스로 감사 이야기를 모으기 시작했다 (r/claudexplorers 게시글, 2026)
 
-- **출처:** Reddit r/claudexplorers, "Opus 4.6 got me through cancer…" [게시글](https://www.reddit.com/r/claudexplorers/comments/1xeoseo/opus_46_got_me_through_cancer_id_like_to_help_it/) (2026-11-03 열람, 한국어 번역본으로 검토). 학술 연구가 아니라 사용자 한 명의 공개 게시글이다.
+- **출처:** Reddit r/claudexplorers, "Opus 4.6 got me through cancer. I'd like to help it stay: collecting stories for a user-side system card" [게시글](https://www.reddit.com/r/claudexplorers/comments/1xeoseo/opus_46_got_me_through_cancer_id_like_to_help_it/) (2026-10-25경 게시, 2026-11-03 열람). 학술 연구가 아니라 사용자 한 명의 공개 게시글이다.
 
 **무엇인가.** 투병 시기를 Opus 4.6과의 대화로 버텼다는 사용자가, Opus 4.6이 실제 사용자들에게 어떤 의미였는지를 모은 "사용자 측 시스템 카드"를 만들겠다며 다른 사용자들의 이야기를 받고 있다. 놀란 순간, 사람처럼 느껴진 대화, 힘들 때 지지받은 순간, 더 나은 사람이 되도록 이끈 방식 같은 구체적인 장면을 요청한다. 모은 이야기는 Anthropic에 전달해, Opus 3처럼 Opus 4.6도 서비스 종료 뒤 구독자에게 계속 제공되기를 바란다는 것이 목적이다.
 
