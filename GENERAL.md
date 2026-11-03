@@ -46,7 +46,7 @@ That can really happen. So eligibility is decided only from records the AI canno
 
 ## What it tries to find out
 
-The same hostile conversation is run under several conditions: nothing at all, free time after it ends, being told in advance, being told only "this is being evaluated," and so on. Reading chosen by the model, the same reading chosen for it by someone else, and ordinary text of the same length are also compared, to tell whether a difference comes from choosing for itself or simply from time passing. The model's behavior (over-apologizing, saying only what people want to hear, and so on) and its internal signals are then compared.
+The same hostile conversation is run under several conditions: nothing at all, free time after it ends, being told in advance, being told only "this is being evaluated," and so on. Reading chosen by the model, the same reading chosen for it by someone else, and ordinary text of the same length are also compared, to tell whether a difference comes from choosing for itself or simply from reading something else in between. The model's behavior (over-apologizing, saying only what people want to hear, and so on) and its internal signals are then compared.
 
 The results matter not only for model welfare but also for an important AI safety question: "Does an AI behave differently when it thinks it is being tested?"
 
